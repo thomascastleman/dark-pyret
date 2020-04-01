@@ -1,0 +1,13 @@
+{
+  "name": "Dark Pyret",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Dark mode for the Pyret editor on code.pyret.org",
+  "short_name": "dark-pyret",
+  "homepage_url": "https://github.com/thomascastleman/dark-pyret",
+  "content_scripts": [{
+    "css": ["css/syntax-highlighting-override.css", "css/editor-override.css"],
+    "js": ["js/test.js"],
+    "matches": ["https://code.pyret.org/editor"]
+  }]
+}
