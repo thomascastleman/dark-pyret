@@ -11,3 +11,4 @@ CPO Editor:
 
 Chrome Ext.:
 - sites to run on: "code.pyret.org", "pyret.cs.brown.edu", and "cpo.herokuapp.com"
+- keep track of global on/off state?
