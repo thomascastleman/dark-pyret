@@ -7,7 +7,7 @@ const overrideSheets = [
 
 function loadCSS(file) {
   var link = document.createElement("link");
-  link.href = chrome.extension.getURL('css/' + file + '.css');
+  link.href = chrome.extension.getURL('css/overrides/' + file + '.css');
   link.id = file;
   link.type = "text/css";
   link.rel = "stylesheet";

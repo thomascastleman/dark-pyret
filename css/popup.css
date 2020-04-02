@@ -1,0 +1,13 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  background-color: #272822;
+  width: 200px;
+}
+
+p {
+  color: #F8F8F2;
+  font-size: 11px;
+}
