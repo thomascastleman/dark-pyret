@@ -4,10 +4,23 @@
   "manifest_version": 2,
   "description": "Dark mode for the Pyret editor on code.pyret.org",
   "short_name": "dark-pyret",
+  "icons": { 
+    "16": "images/icons/dark-pyret-icon-16.png",
+    "48": "images/icons/dark-pyret-icon-48.png",
+   "128": "images/icons/dark-pyret-icon-128.png" },
   "homepage_url": "https://github.com/thomascastleman/dark-pyret",
   "content_scripts": [{
-    "css": ["css/syntax-highlighting-override.css", "css/editor-override.css"],
-    "js": ["js/test.js"],
+    "js": ["js/toggle-css-injection.js"],
     "matches": ["https://code.pyret.org/editor"]
-  }]
+  }],
+  "permissions" : ["tabs"],
+  "web_accessible_resources": [
+    "css/syntax-highlighting-override.css",
+    "css/editor-override.css"
+  ],
+  "browser_action": {
+    "default_popup": "html/interface.html",
+    "default_title": "Dark Pyret"
+  },
+  "content_security_policy":"script-src 'self' https://gitcdn.github.io; object-src 'self'"
 }
