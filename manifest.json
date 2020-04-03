@@ -13,6 +13,10 @@
     "js": ["js/toggle-theme.js"],
     "matches": ["https://code.pyret.org/editor"]
   }],
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
   "permissions" : ["tabs", "storage"],
   "web_accessible_resources": [
     "css/overrides/syntax-highlighting-override.css",
