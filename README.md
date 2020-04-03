@@ -9,3 +9,6 @@ Light Pyret             |  Dark Pyret
 
 ### Contributors
 Created by Thomas Castleman & Raj Paul. Icon design by Floria Tsui.
+
+### Feedback
+Found a bug? Email darkpyret@gmail.com
