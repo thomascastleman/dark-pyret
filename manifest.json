@@ -13,7 +13,7 @@
     "js": ["js/toggle-theme.js"],
     "matches": ["https://code.pyret.org/editor"]
   }],
-  "permissions" : ["tabs"],
+  "permissions" : ["tabs", "storage"],
   "web_accessible_resources": [
     "css/overrides/syntax-highlighting-override.css",
     "css/overrides/editor-override.css"

@@ -31,15 +31,23 @@ function disableDarkTheme() {
   overrideSheets.map(sh => unloadCSS(sh));
 }
 
-// listen for messages from the popup script
+function updateTheme(darkThemeOn) {
+  if (darkThemeOn) {
+    enableDarkTheme();
+  } else {
+    disableDarkTheme();
+  }
+}
+
+// listen for toggling dark theme
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.darkThemeOn) {
-      enableDarkTheme();
-    } else {
-      disableDarkTheme();
-    }
+    updateTheme(request.darkThemeOn);
   }
 );
 
-// by default, dark theme is on
-enableDarkTheme();
+// check storage for whether or not dark theme is enabled
+chrome.storage.sync.get("darkThemeOn", (items) => {
+  console.log("CONTENT SCRIPT LOGGING STORAGE:");
+  console.log(items);
+  updateTheme(items.darkThemeOn);
+});
