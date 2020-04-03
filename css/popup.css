@@ -1,8 +1,14 @@
 
-html, body {
+html {
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 7px;
+  padding-top: 2px;
+  padding-bottom: 13px;
   background-color: #272822;
   width: 150px;
 }
@@ -10,4 +16,13 @@ html, body {
 p {
   color: #F8F8F2;
   font-size: 11px;
+}
+
+#bug-report {
+  margin-top: 5px;
+}
+
+#bug-report * {
+  font-size: 10px;
+  color: #b3b3b3;
 }
