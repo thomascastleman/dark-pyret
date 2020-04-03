@@ -11,7 +11,11 @@
   "homepage_url": "https://github.com/thomascastleman/dark-pyret",
   "content_scripts": [{
     "js": ["js/toggle-theme.js"],
-    "matches": ["https://code.pyret.org/editor"]
+    "matches": [
+      "https://code.pyret.org/editor",
+      "https://pyret.cs.brown.edu/assignment/*",
+      "http://cpo.herokuapp.com/editor"
+    ]
   }],
   "background": {
     "scripts": ["js/background.js"],
