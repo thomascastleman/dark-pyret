@@ -5,7 +5,7 @@ A Chrome extension for Pyret dark theme in [code.pyret.org](https://code.pyret.o
 
 Light Pyret             |  Dark Pyret
 :-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/thomascastleman/dark-pyret/master/images/light-pyret-demo.png)  |  ![](https://github.com/thomascastleman/dark-pyret/blob/master/images/dark-pyret-demo.png)
+![](https://raw.githubusercontent.com/thomascastleman/dark-pyret/master/images/light-pyret-demo.png)  |  ![](https://raw.githubusercontent.com/thomascastleman/dark-pyret/master/images/dark-pyret-demo.png)
 
 ### Contributors
 Created by Thomas Castleman & Raj Paul. Icon design by Floria Tsui.
