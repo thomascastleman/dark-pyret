@@ -47,7 +47,5 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 // check storage for whether or not dark theme is enabled
 chrome.storage.sync.get("darkThemeOn", (items) => {
-  console.log("CONTENT SCRIPT LOGGING STORAGE:");
-  console.log(items);
   updateTheme(items.darkThemeOn);
 });

@@ -17,14 +17,23 @@
 }
 
 /* scrollbar */
-.CodeMirror-vscrollbar {
-  background: #272822 !important;
-  color: #f8f8f2 !important;
-  /* scrollbar-color: dark !important; */
+.CodeMirror-vscrollbar::-webkit-scrollbar {
+  width: 11px;
+  background-color: #43453b !important;;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+  background-color: #5e6052 !important;
+  border-radius: 5px !important;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #797c6a !important;
 }
 
 /* middle resize handle */
 #handle {
+  background: none !important;
   background-color: #43453b !important;
 }
 
@@ -103,3 +112,20 @@
   background-color: #35372f !important;
   color: #F8F8F2 !important;
 }
+
+/* ---------------------- SPINNY PYRET LOADING SCREEN ---------------------- */
+
+#loader {
+  background-color: #272822 !important;
+}
+
+/* the pirate text on the loader screen */
+#loader > p {
+  color: #F8F8F2 !important;
+}
+
+/* For pyret.cs.brown.edu */
+.test-file-blocks, .file-test-results {
+  background-color: #272822 !important;
+}
+
