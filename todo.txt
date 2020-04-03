@@ -1,10 +1,9 @@
 To Do.
 
 Syntax Highlighting:
-- darken the highlight color for when a closed region is highlighted
 - test every corner of Pyret's syntax, make sure we're happy with the chosen colors
-  - yellow strings or (ooh) green strings?
 
 CPO Editor:
-- darken the interactions window
-- darken error messages / check block messages
+- darken error messages
+- check block messages
+  - success & failure

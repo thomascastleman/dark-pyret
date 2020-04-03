@@ -7,7 +7,205 @@
   color: #f8f8f2 !important;
 }
 
+/* SCROLLBAR */
+
 .CodeMirror-vscrollbar {
   background: #272822 !important;
   color: #f8f8f2 !important;
+  /* scrollbar-color: dark !important; */
+}
+
+/* MIDDLE RESIZE HANDLE */
+
+#handle {
+  background-color: #43453b !important;
+}
+
+/* CODE SNIPPETS */
+.cm-snippet > header {
+  background-color: #505346 !important;
+}
+
+.cm-snippet > header .srcloc {
+  color: #F8F8F2 !important;
+}
+
+/* ERROR MESSAGES */
+
+.compile-error {
+  font-family: sans-serif;
+  border: 1px dashed #FF3131;
+  padding: 0.2em;
+  box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
+  border-radius: 3px;
+  background: #35372f;
+  margin: 6px;
+}
+
+.compile-error .code {
+  font-family: monospace;
+}
+
+.compile-error .srcloc {
+  font-family: monospace;
+}
+
+.compile-error a {
+  color: #469ad4;
+  cursor: pointer;
+}
+
+/* compile error with no highlighting */
+
+#output > .compile-error:not(.highlights-active):hover:after,
+.check-block-error > .compile-error:not(.highlights-active):hover::after,
+.check-block-test.failing-test:not(.highlights-active):hover {
+    box-shadow: 0 0 2em red !important;
+    transform: scale(1.01);
+    backface-visibility: hidden;
+    transition: scale(1.01) .2s linear;
+    border-image-outset: 5px;
+}
+
+#output > .compile-error:not(.highlights-active):hover:after,
+.check-block-error > .compile-error:not(.highlights-active):hover::after,
+.check-block-test.failing-test:not(.highlights-active):hover::after{
+    content:'';
+    position:absolute;
+    height:100%;
+    width:100%;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.0) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%);
+    top:0;
+    left:0;
+    background-size: cover;
+    cursor: pointer;
+    background-position: 100em;
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    animation: 0.7s shine linear 1;
+}
+
+#output > .compile-error:not(.highlights-active) > *,
+.check-block-error > .compile-error:not(.highlights-active) > *,
+.check-block-test.failing-test:not(.highlights-active) .test-reason {
+  opacity: 0.5;
+}
+
+
+/* compile error with highlighting */
+
+#output > .compile-error.highlights-active,
+.check-block-error .highlights-active.compile-error,
+.check-block-test.highlights-active {
+  border: 0.3em hsl(204, 100%, 74%) solid;
+  box-shadow: 0 0 1em;
+}
+
+.check-block-error .highlights-active.compile-error,
+.check-block-test.highlights-active {
+  background: hsla(0,0%,100%,.9);
+}
+
+
+/* text that is printed in the REPL, it seems */
+.replPrint {
+  font-family: monospace;
+  padding-top: 0;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  color: #F8F8F2;
+}
+
+.replOutput, .replTextOutput {
+  color: #F8F8F2 !important;
+}
+
+
+.testing-summary{
+  color: #66D9EF !important;
+  background: #42453b !important;
+}
+
+/* CHECK BLOCKS */
+
+
+.check-block-failed {
+  background-color: #42453b !important;
+  color: #ff6666 !important;
+}
+
+.check-block-errored {
+  background-color: hsl(0, 100%, 90%);
+}
+
+.check-block-success {
+  background-color: #42453b !important;
+  color: #80ff80 !important;
+  margin: 5px;
+}
+.check-block-errored {
+  background-color: #42453b !important;
+  color: hsl(0, 100%, 90%) !important;
+}
+
+#output > .compile-error.highlights-active,
+.check-block-error .highlights-active.compile-error,
+.check-block-test.highlights-active {
+  border: 0.3em hsl(204, 100%, 74%) solid;
+  box-shadow: 0 0 1em;
+}
+
+.compile-error.highlights-active {
+  background-color: #42453b !important;
+}
+
+.check-block-error .highlights-active.compile-error,
+.check-block-test.highlights-active {
+  background: hsla(0,0%,100%,.9) !important;
+}
+
+.check-block-test.failing-test:not(.highlights-active) {background-color: hsl(45, 100%, 94%);overflow: hidden;}
+.check-block-test.passing-test {
+  background-color: #42453b !important;
+}
+
+.check-block-test.passing-test .cm-snippet {
+  margin: 0.5em;
+}
+
+.check-block-test.failing-test,
+.check-block-test.passing-test, 
+.check-block-test header,
+.test-reason {
+  background-color: #35372f !important;
+  color: #F8F8F2 !important;
+}
+
+.check-block-test{
+  position: relative;
+  overflow: hidden;
+  padding-bottom: none !important;
+}
+
+.check-block-test:not(:last-child) {
+  margin-bottom: 0.75em;
+}
+
+.check-block-test {
+  background-image: none !important;
+}
+
+.summary-failed {
+  background-color: #36372f !important;
+  color: #ff6666 !important;
+}
+
+.summary-passed {
+  background-color: #36372f !important;
+  color: #80ff80 !important;
 }

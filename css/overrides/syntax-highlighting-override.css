@@ -61,36 +61,36 @@
 .cm-boolean { color: #AE81FF !important; }
 
 html div.CodeMirror-selected, html span.CodeMirror-selectedtext {
-  background-color: rgba(73, 72, 62, .99) !important;
+  background-color: rgb(73, 72, 62) !important;
 }
 
 /*  This highlights regions (like fun ... end or beginnings and endings of parentheses)
     Let's make them gray so as not to hurt the eyes. */
 div.CodeMirror span.CodeMirror-matchingbracket-region {
   position: relative;
-  background-color: #515346 !important;
-  border-top: 0.1em solid #515346 !important;
-  border-bottom: 0.1em solid #515346 !important;
+  background-color: #43453b !important;
+  border-top: 0.1em solid #43453b !important;
+  border-bottom: 0.1em solid #43453b !important;
 }
 
 div.CodeMirror span.CodeMirror-matchingbracket-region:last-of-type {
-  box-shadow: 0.5em 0 0.25em #515346 !important;
+  box-shadow: 0.5em 0 0.25em #43453b !important;
 }
 div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type {
-  box-shadow: -0.5em 0 0.25em #515346 !important;
+  box-shadow: -0.5em 0 0.25em #43453b !important;
 }
 div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type:last-of-type {
-  box-shadow: -0.5em 0 0.25em #515346, 0.5em 0 0.25em #515346 !important;
+  box-shadow: -0.5em 0 0.25em #43453b, 0.5em 0 0.25em #43453b !important;
 }
 div.CodeMirror span.CodeMirror-matchingbracket.open {
-box-shadow: -0.3ex 0 0.3ex #515346 !important;
+box-shadow: -0.3ex 0 0.3ex #43453b !important;
 }
 div.CodeMirror span.CodeMirror-matchingbracket.open:last-of-type {
-box-shadow: 0.5em 0 0.25em #515346, -0.3ex 0 0.3ex #515346 !important;
+box-shadow: 0.5em 0 0.25em #43453b, -0.3ex 0 0.3ex #43453b !important;
 }
 div.CodeMirror span.CodeMirror-matchingbracket.close {
-box-shadow: 0.3ex 0 0.3ex #515346 !important;
+box-shadow: 0.3ex 0 0.3ex #43453b !important;
 }
 div.CodeMirror span.CodeMirror-matchingbracket.close:first-of-type {
-box-shadow: -0.5em 0 0.25em #515346, 0.3ex 0 0.3ex #515346 !important;
+box-shadow: -0.5em 0 0.25em #43453b, 0.3ex 0 0.3ex #43453b !important;
 }
