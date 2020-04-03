@@ -2,33 +2,12 @@
   This file contains overrides for the overall look of the CPO editor.
 */
 
-/*  This highlights regions (like fun ... end or beginnings and endings of parentheses)
-    Let's make them gray so as not to hurt the eyes. */
-div.CodeMirror span.CodeMirror-matchingbracket-region {
-  position: relative;
-  background-color: #515346 !important;
-  border-top: 0.1em solid #515346 !important;
-  border-bottom: 0.1em solid #515346 !important;
+.repl {
+  background: #272822 !important;
+  color: #f8f8f2 !important;
 }
 
-div.CodeMirror span.CodeMirror-matchingbracket-region:last-of-type {
-  box-shadow: 0.5em 0 0.25em #515346 !important;
-}
-div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type {
-  box-shadow: -0.5em 0 0.25em #515346 !important;
-}
-div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type:last-of-type {
-  box-shadow: -0.5em 0 0.25em #515346, 0.5em 0 0.25em #515346 !important;
-}
-div.CodeMirror span.CodeMirror-matchingbracket.open {
-box-shadow: -0.3ex 0 0.3ex #515346 !important;
-}
-div.CodeMirror span.CodeMirror-matchingbracket.open:last-of-type {
-box-shadow: 0.5em 0 0.25em #515346, -0.3ex 0 0.3ex #515346 !important;
-}
-div.CodeMirror span.CodeMirror-matchingbracket.close {
-box-shadow: 0.3ex 0 0.3ex #515346 !important;
-}
-div.CodeMirror span.CodeMirror-matchingbracket.close:first-of-type {
-box-shadow: -0.5em 0 0.25em #515346, 0.3ex 0 0.3ex #515346 !important;
+.CodeMirror-vscrollbar {
+  background: #272822 !important;
+  color: #f8f8f2 !important;
 }

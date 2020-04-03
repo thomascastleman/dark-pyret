@@ -1,16 +1,16 @@
 /*
   This file contains overrides for the syntax highlighting.
 
-  Check out the colors here: 
+  Check out the colors here:
   https://marketplace.visualstudio.com/items?itemName=SuperPaintman.monokai-extended
 */
 
 /* Based on Sublime Text's Monokai theme */
 /* Taken from https://codemirror.net/theme/monokai.css */
 
-.CodeMirror { 
-  background: #272822 !important; 
-  color: #f8f8f2 !important; 
+.CodeMirror {
+  background: #272822 !important;
+  color: #f8f8f2 !important;
 }
 
 .cm-s-default div.CodeMirror-selected { background: #49483E !important; }
@@ -25,6 +25,8 @@
 .cm-s-default span.cm-comment { color: #75715e !important; }
 .cm-s-default span.cm-atom { color: #ae81ff !important; }
 .cm-s-default span.cm-number { color: #ae81ff !important; }
+.cm-s-default span.cm-roughnum { color: #E69F66 !important; font-weight: bold
+  !important;}
 
 .cm-s-default span.cm-comment.cm-attribute { color: #97b757 !important; }
 .cm-s-default span.cm-comment.cm-def { color: #bc9262 !important; }
@@ -34,7 +36,7 @@
 .cm-s-default span.cm-property, .cm-s-default span.cm-attribute { color: #a6e22e !important; }
 .cm-s-default span.cm-keyword { color: #f92672 !important; }
 .cm-s-default span.cm-builtin { color: #66d9ef !important; }
-.cm-s-default span.cm-string { color: #e6db74 !important; }
+.cm-s-default span.cm-string { color: #A6E22E !important; }
 
 .cm-s-default span.cm-variable { color: #f8f8f2 !important; }
 .cm-s-default span.cm-variable-2 { color: #9effff !important; }
@@ -60,4 +62,35 @@
 
 html div.CodeMirror-selected, html span.CodeMirror-selectedtext {
   background-color: rgba(73, 72, 62, .99) !important;
+}
+
+/*  This highlights regions (like fun ... end or beginnings and endings of parentheses)
+    Let's make them gray so as not to hurt the eyes. */
+div.CodeMirror span.CodeMirror-matchingbracket-region {
+  position: relative;
+  background-color: #515346 !important;
+  border-top: 0.1em solid #515346 !important;
+  border-bottom: 0.1em solid #515346 !important;
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket-region:last-of-type {
+  box-shadow: 0.5em 0 0.25em #515346 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type {
+  box-shadow: -0.5em 0 0.25em #515346 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type:last-of-type {
+  box-shadow: -0.5em 0 0.25em #515346, 0.5em 0 0.25em #515346 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.open {
+box-shadow: -0.3ex 0 0.3ex #515346 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.open:last-of-type {
+box-shadow: 0.5em 0 0.25em #515346, -0.3ex 0 0.3ex #515346 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.close {
+box-shadow: 0.3ex 0 0.3ex #515346 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.close:first-of-type {
+box-shadow: -0.5em 0 0.25em #515346, 0.3ex 0 0.3ex #515346 !important;
 }
