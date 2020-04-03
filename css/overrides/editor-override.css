@@ -124,8 +124,18 @@
   color: #F8F8F2 !important;
 }
 
-/* For pyret.cs.brown.edu */
+/* ----------------- pyret.cs.brown.edu specific overrides ----------------- */
 .test-file-blocks, .file-test-results {
   background-color: #272822 !important;
 }
 
+/* bar at top of testing block indicating "VALIDITY UNKNOWN" */
+.maybe-valid {
+  background-color: #5e6052 !important;
+}
+
+/* bar at top of testing block, indicating "VALID" */
+.valid {
+  background-color: #5e6052 !important;
+  color: #3c9ee5 !important;
+}

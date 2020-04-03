@@ -2,3 +2,6 @@ To Do.
 
 Syntax Highlighting:
 - test every corner of Pyret's syntax, make sure we're happy with the chosen colors
+
+Editor:
+- Examplar chaff-catching test highlighting--make darker
