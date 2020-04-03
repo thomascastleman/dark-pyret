@@ -6,4 +6,5 @@ Syntax Highlighting:
 CPO Editor:
 - darken error messages
 - check block messages
-  - success & failure
+- darken scrollbar? can we?
+- darken righthand loading background
