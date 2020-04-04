@@ -113,6 +113,36 @@
   color: #F8F8F2 !important;
 }
 
+/* ----------------- Tables in the interactions window ----------------- */
+
+.pyret-table tbody * {
+  color: #F8F8F2 !important;
+}
+
+/* table headers */
+th {
+  background: #36372f !important;
+  color: #66D9EF !important;
+}
+
+.pyret-table tr:nth-child(even){
+  background-color: #515346 !important;
+}
+
+.pyret-table tbody {
+  background-color: #5e6052 !important;
+}
+
+/* borders */
+.pyret-table {
+  border: 1px #abaf9d solid !important;
+}
+
+.pyret-table th, td {
+  border-right: 1px #abaf9d solid !important;
+}
+
+
 /* ---------------------- SPINNY PYRET LOADING SCREEN ---------------------- */
 
 #loader {
