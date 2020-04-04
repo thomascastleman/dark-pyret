@@ -2,3 +2,4 @@ To Do.
 
 Editor:
 - Examplar chaff-catching test highlighting--make darker
+- Mark passed tests in a failed check block with green, only failed tests in red
