@@ -5,6 +5,7 @@ const overrideSheets = [
   'editor-override'
 ];
 
+// add a stylesheet link to the <head>
 function loadCSS(file) {
   var link = document.createElement("link");
   link.href = chrome.extension.getURL('css/overrides/' + file + '.css');
@@ -18,19 +19,17 @@ function loadCSS(file) {
   }
 }
 
+// remove a stylesheet link from the <head>
 function unloadCSS(file) {
   var cssNode = document.getElementById(file);
   cssNode && cssNode.parentNode.removeChild(cssNode);
 }
 
-function enableDarkTheme() {
-  overrideSheets.map(sh => loadCSS(sh));
-}
+// for all override sheets, load or unload them
+function enableDarkTheme() { overrideSheets.map(sh => loadCSS(sh)); }
+function disableDarkTheme() { overrideSheets.map(sh => unloadCSS(sh)); }
 
-function disableDarkTheme() {
-  overrideSheets.map(sh => unloadCSS(sh));
-}
-
+// add or remove stylesheets based on whether dark theme is on/off
 function updateTheme(darkThemeOn) {
   if (darkThemeOn) {
     enableDarkTheme();
