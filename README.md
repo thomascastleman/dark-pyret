@@ -7,8 +7,11 @@ Light Pyret             |  Dark Pyret
 :-------------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/thomascastleman/dark-pyret/master/images/light-pyret-demo.png)  |  ![](https://raw.githubusercontent.com/thomascastleman/dark-pyret/master/images/dark-pyret-demo.png)
 
+### Install
+Find it on the Chrome Web Store [here](https://chrome.google.com/webstore/detail/dark-pyret/jahmdeebfkoocpblokbimjnebdogpflo)!
+
 ### Contributors
 Created by Thomas Castleman & Raj Paul. Icon design by Floria Tsui.
 
 ### Feedback
-Found a bug? Email darkpyret@gmail.com
+Found a bug? Something not look right? Let us know at darkpyret@gmail.com!
