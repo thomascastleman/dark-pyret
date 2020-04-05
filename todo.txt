@@ -2,4 +2,7 @@ To Do.
 
 Editor:
 - Examplar chaff-catching test highlighting--make darker
+	- check out https://pyret.cs.brown.edu/js/output-ui.js
+- Examplar: valid/invalid/unknown container blocks coloring--lighter blue to fit theme?
+	- buggie background colors
 - Mark passed tests in a failed check block with green, only failed tests in red
