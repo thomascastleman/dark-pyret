@@ -114,6 +114,18 @@
   color: #F8F8F2 !important;
 }
 
+/* bold and make the "Test: Failed" text red in a failed test */
+.check-block-test.failing-test > header {
+  color: #ff6666 !important;
+  font-weight: bold !important;
+}
+
+/* bold and make the "Test: Passed" text green in a passed test */
+.check-block-test.passing-test > header {
+  color: #80ff80 !important;
+  font-weight: bold !important;
+}
+
 
 /* ----------------- Tables in the interactions window ----------------- */
 
