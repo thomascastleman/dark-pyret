@@ -190,5 +190,14 @@ th {
 /* bar at top of testing block, indicating "VALID" */
 .valid {
   background-color: #5e6052 !important;
-  color: #3c9ee5 !important;
+  /* color: #3c9ee5 !important; */
 }
+
+/* 
+.file-test-results {
+  border: .3em #66D9EF solid !important;
+}
+
+.file-test-results > header {
+  background-color: #66D9EF !important;
+} */
