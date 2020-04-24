@@ -1,12 +1,5 @@
-/*
-  This file contains overrides for the syntax highlighting.
-
-  Check out the colors here:
-  https://marketplace.visualstudio.com/items?itemName=SuperPaintman.monokai-extended
-*/
-
-/* Based on Sublime Text's Monokai theme */
-/* Taken from https://codemirror.net/theme/monokai.css */
+/*  Taken from https://codemirror.net/theme/monokai.css 
+    Modified slightly. */
 
 .CodeMirror {
   background: #272822 !important;
@@ -48,21 +41,13 @@
 .cm-s-default span.cm-header { color: #ae81ff !important; }
 .cm-s-default span.cm-link { color: #ae81ff !important; }
 .cm-s-default span.cm-error { background: #f92672 !important; color: #f8f8f0 !important; }
+.cm-s-default .cm-function-name {  color: #f8f8f2 !important; }
+.cm-s-default .cm-boolean { color: #AE81FF !important; }
 
 .cm-s-default .CodeMirror-activeline-background { background: #373831 !important; }
 .cm-s-default .CodeMirror-matchingbracket {
   text-decoration: underline !important;
   color: white !important;
-}
-
-
-/* Some things we need to override */
-
-.cm-function-name {  color: #f8f8f2 !important; }
-.cm-boolean { color: #AE81FF !important; }
-
-html div.CodeMirror-selected, html span.CodeMirror-selectedtext {
-  background-color: rgb(73, 72, 62) !important;
 }
 
 /*  This highlights regions (like fun ... end or beginnings and endings of parentheses)

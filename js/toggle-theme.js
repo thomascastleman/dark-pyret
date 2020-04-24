@@ -1,8 +1,16 @@
 
 // stylesheets that apply the dark theme
 const overrideSheets = [
-  'syntax-highlighting-override',
   'editor-override'
+];
+
+// current theme
+let theme = 'monokai';
+
+// available themes (filenames in themes/)
+const themes = [
+  'monokai',
+  'nord'
 ];
 
 // add a stylesheet link to the <head>
@@ -26,11 +34,17 @@ function unloadCSS(file) {
 }
 
 // for all override sheets, load or unload them
-function enableDarkTheme() { overrideSheets.map(sh => loadCSS(sh)); }
-function disableDarkTheme() { overrideSheets.map(sh => unloadCSS(sh)); }
+function enableDarkTheme() { 
+  overrideSheets.map(sh => loadCSS(sh));
+  loadCSS('themes/' + theme); // load the current theme
+}
+function disableDarkTheme() { 
+  overrideSheets.map(sh => unloadCSS(sh)); 
+  unloadCSS('themes/' + theme);   // unload the current theme
+}
 
 // add or remove stylesheets based on whether dark theme is on/off
-function updateTheme(darkThemeOn) {
+function toggleTheme(darkThemeOn) {
   if (darkThemeOn) {
     enableDarkTheme();
   } else {
@@ -38,13 +52,29 @@ function updateTheme(darkThemeOn) {
   }
 }
 
+function setTheme(newTheme) {
+  if (newTheme != theme) {
+    unloadCSS('themes/' + theme);
+    loadCSS('themes/' + newTheme);
+    theme = newTheme;
+  }
+}
+
 // listen for toggling dark theme
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    updateTheme(request.darkThemeOn);
+    console.log(request);
+
+    toggleTheme(request.darkThemeOn);
+    setTheme(request.currentTheme);
   }
 );
 
-// check storage for whether or not dark theme is enabled
-chrome.storage.sync.get("darkThemeOn", (items) => {
-  updateTheme(items.darkThemeOn);
+// check storage for current theme
+chrome.storage.sync.get("currentTheme", (items) => {
+  setTheme(items.currentTheme);
+
+  // check storage for whether or not dark theme is enabled
+  chrome.storage.sync.get("darkThemeOn", (items) => {
+    toggleTheme(items.darkThemeOn);
+  });
 });

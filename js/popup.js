@@ -20,16 +20,44 @@ function toggleDarkTheme() {
   });
 }
 
+function changeTheme(themeRadio) {
+  const newTheme = themeRadio.value;
+  setGlobalThemeChange(newTheme);
+
+  // get all tabs currently in use
+  chrome.tabs.query({ /* currentWindow: true, active: true */ }, (tabs) => {
+    // send the new theme to all open tabs
+    for (let i = 0; i < tabs.length; i++) {
+      chrome.tabs.sendMessage(tabs[i].id, { currentTheme: newTheme });
+    }
+  });
+}
+
 // when the DOM loads
 document.addEventListener("DOMContentLoaded", () => {
   // listen for changes in the checkbox in the popup
   document.getElementById("toggle").addEventListener("change", toggleDarkTheme);
+
+  // let themeOptions = document.getElementById("theme-form").theme; // get the theme radio
+
+  // for (let i = 0; i < themeOptions.length; i++) {
+  //   themeOptions[i].onclick = (() => {
+  //     console.log(this.value);
+  //   });
+  // }
 });
 
 // record whether dark theme is on in global storage
 function setGlobalDarkTheme(darkThemeOn) {
   chrome.storage.sync.set({ "darkThemeOn": darkThemeOn }, () => {
     console.log("darkThemeOn: ", darkThemeOn);
+  });
+}
+
+// record the current theme in global storage
+function setGlobalThemeChange(newTheme) {
+  chrome.storage.sync.set({ "currentTheme": newTheme }, () => {
+    console.log("currentTheme: ", newTheme);
   });
 }
 
@@ -42,5 +70,15 @@ chrome.storage.sync.get("darkThemeOn", (items) => {
     toggle.checked = true;
   } else {
     toggle.checked = false;
+  }
+});
+
+// check storage for what the current theme is set to
+chrome.storage.sync.get("currentTheme", (items) => {
+  let themeOptions = document.getElementById("theme-form").theme; // get the theme radio
+
+  // check only the radio elt of the theme currently in use
+  for (let i = 0; i < themeOptions.length; i++) {
+    themeOptions[i].checked = themeOptions[i].value == items.currentTheme;
   }
 });
