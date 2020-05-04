@@ -5,7 +5,7 @@
   "description": "Dark mode for the Pyret editor on code.pyret.org",
   "short_name": "dark-pyret",
   "icons": {
-    "16": "images/icons/dark-pyret-icon-16.png",
+    "16": "images/icons/dark-pyret-icon-simplified-16.png",
     "48": "images/icons/dark-pyret-icon-48.png",
    "128": "images/icons/dark-pyret-icon-128.png" },
   "homepage_url": "https://github.com/thomascastleman/dark-pyret",

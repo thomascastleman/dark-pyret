@@ -1,8 +1,5 @@
 To Do.
 
-Extension
-- add simplified icon
-
 Syntax highlighting:
 - support multiple dark themes
 
