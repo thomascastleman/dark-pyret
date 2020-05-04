@@ -1,7 +1,10 @@
 To Do.
 
+Extension
+- add simplified icon
+
 Syntax highlighting:
-- support multiple dark themes?
+- support multiple dark themes
 
 Editor:
 - Examplar chaff-catching test highlighting--make darker

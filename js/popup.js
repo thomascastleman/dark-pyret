@@ -15,7 +15,10 @@ function toggleDarkTheme() {
   chrome.tabs.query({ /* currentWindow: true, active: true */ }, (tabs) => {
     // send the new dark theme status to ALL open tabs
     for (let i = 0; i < tabs.length; i++) {
-      chrome.tabs.sendMessage(tabs[i].id, { darkThemeOn });
+      chrome.tabs.sendMessage(tabs[i].id, { 
+        darkThemeOn,
+        togglingTheme: true // flag to indicate what's being changed
+      });
     }
   });
 }
@@ -27,7 +30,10 @@ function changeTheme(newTheme) {
   chrome.tabs.query({ /* currentWindow: true, active: true */ }, (tabs) => {
     // send the new theme to all open tabs
     for (let i = 0; i < tabs.length; i++) {
-      chrome.tabs.sendMessage(tabs[i].id, { currentTheme: newTheme });
+      chrome.tabs.sendMessage(tabs[i].id, { 
+        currentTheme: newTheme, 
+        updatingTheme: true   // flag to indicate what's being changed
+      });
     }
   });
 }

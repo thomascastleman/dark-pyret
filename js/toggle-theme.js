@@ -4,13 +4,14 @@ const overrideSheets = [
   'editor-override'
 ];
 
-// current theme
-let theme = 'monokai';
+let theme = 'monokai';  // current theme
+let themeOn;  // are themes turned on
 
 // available themes (filenames in themes/)
 const themes = [
   'monokai',
-  'nord'
+  'nord',
+  'fried'
 ];
 
 // add a stylesheet link to the <head>
@@ -51,23 +52,28 @@ function toggleTheme(darkThemeOn) {
   } else {
     disableDarkTheme();
   }
+  themeOn = darkThemeOn;
 }
 
 function setTheme(newTheme) {
   if (newTheme != theme) {
-    unloadCSS('themes/' + theme);
-    loadCSS('themes/' + newTheme);
-    overrideSheets.map(sh => loadCSS(sh));
+    // only load / unload sheets if themes are turned on
+    if (themeOn) {
+      loadCSS('themes/' + newTheme);
+      unloadCSS('themes/' + theme);
+    }
     theme = newTheme;
   }
 }
 
 // listen for toggling dark theme
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    console.log(request);
-
-    toggleTheme(request.darkThemeOn);
-    setTheme(request.currentTheme);
+    if (request.togglingTheme) {
+      toggleTheme(request.darkThemeOn);
+    }
+    if (request.updatingTheme) {
+      setTheme(request.currentTheme);
+    }
   }
 );
 
