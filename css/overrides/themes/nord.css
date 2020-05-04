@@ -82,6 +82,6 @@ box-shadow: -0.5em 0 0.25em #20242c, 0.3ex 0 0.3ex #20242c !important;
 
 
 /* Interactions Window */
-.repl {
-  background: #2e3440 !important;
+.repl, #loader {
+  background-color: #2e3440 !important;
 }

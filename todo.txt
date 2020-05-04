@@ -1,8 +1,14 @@
 To Do.
 
+Popup:
+- make radio interface nicer
+
 Syntax highlighting:
-- support multiple dark themes
-	- material?
+- finish editing the following themes:
+	- material-darker
+	- panda-syntax
+	- icecoder
+	- fried
 
 Editor:
 - Examplar chaff-catching test highlighting--make darker

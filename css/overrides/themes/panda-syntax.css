@@ -1,0 +1,85 @@
+/*
+	Name:       Panda Syntax
+	Author:     Siamak Mokhtari (http://github.com/siamak/)
+	CodeMirror template by Siamak Mokhtari (https://github.com/siamak/atom-panda-syntax)
+*/
+.cm-s-default {
+	background: #292A2B !important;
+	color: #E6E6E6 !important;
+	/* line-height: 1.5 !important; */
+	/* font-family: 'Operator Mono', 'Source Code Pro', Menlo, Monaco, Consolas, Courier New, monospace !important; */
+}
+.cm-s-default .CodeMirror-cursor { border-color: #ff2c6d !important; }
+.cm-s-default .CodeMirror-activeline-background {
+	background: rgba(99, 123, 156, 0.1) !important;
+}
+.cm-s-default .CodeMirror-selected {
+	background: #FFF !important;
+}
+.cm-s-default .cm-comment {
+	font-style: italic !important;
+	color: #676B79 !important;
+}
+.cm-s-default .cm-operator {
+	color: #f3f3f3 !important;
+}
+.cm-s-default .cm-string {
+	color: #19F9D8 !important;
+}
+.cm-s-default .cm-string-2 {
+    color: #FFB86C !important;
+}
+
+.cm-s-default .cm-tag {
+	color: #ff2c6d !important;
+}
+.cm-s-default .cm-meta {
+	color: #b084eb !important;
+}
+
+.cm-s-default .cm-number {
+	color: #FFB86C !important;
+}
+.cm-s-default .cm-atom {
+	color: #ff2c6d !important;
+}
+.cm-s-default .cm-keyword {
+	color: #FF75B5 !important;
+}
+.cm-s-default .cm-variable {
+	color: #ffb86c !important;
+}
+.cm-s-default .cm-variable-2 {
+	color: #ff9ac1 !important;
+}
+.cm-s-default .cm-variable-3, .cm-s-default .cm-type {
+	color: #ff9ac1 !important;
+}
+
+.cm-s-default .cm-def {
+	color: #e6e6e6 !important;
+}
+.cm-s-default .cm-property {
+	color: #f3f3f3 !important;
+}
+.cm-s-default .cm-unit {
+    color: #ffb86c !important;
+}
+
+.cm-s-default .cm-attribute {
+    color: #ffb86c !important;
+}
+
+.cm-s-default .CodeMirror-matchingbracket {
+    border-bottom: 1px dotted #19F9D8 !important;
+    padding-bottom: 2px !important;
+    color: #e6e6e6 !important;
+}
+.cm-s-default .CodeMirror-gutters {
+    background: #292a2b !important;
+    border-right-color: rgba(255, 255, 255, 0.1) !important;
+}
+.cm-s-default .CodeMirror-linenumber {
+    color: #e6e6e6 !important;
+    opacity: 0.6 !important;
+}

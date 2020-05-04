@@ -10,7 +10,10 @@ let themeOn;  // are themes turned on
 // available themes (filenames in themes/)
 const themes = [
   'monokai',
+  'material-darker',
   'nord',
+  'panda-syntax',
+  'icecoder',
   'fried'
 ];
 
