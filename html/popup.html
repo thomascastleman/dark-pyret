@@ -5,6 +5,7 @@
     <script type="text/javascript" src="../js/popup.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/toggle-slider.css">
     <link rel="stylesheet" type="text/css" href="../css/popup.css">
+    <link rel="stylesheet" type="text/css" href="../css/radio.css">
   </head>
   <body>
     <center>
@@ -17,19 +18,32 @@
     </center>
 
     <div id="themes">
+      <p><b>Choose Theme</b></p>
       <form id="theme-form">
-        <input type="radio" id="monokai" class="theme" name="theme" value="monokai">
-        <label for="monokai">Monokai</label><br>
-        <input type="radio" id="material-darker" class="theme" name="theme" value="material-darker">
-        <label for="material-darker">Material Darker</label><br>
-        <input type="radio" id="nord" class="theme" name="theme" value="nord">
-        <label for="nord">Nord</label><br>
-        <input type="radio" id="panda-syntax" class="theme" name="theme" value="panda-syntax">
-        <label for="panda-syntax">Panda Syntax</label><br>
-        <input type="radio" id="icecoder" class="theme" name="theme" value="icecoder">
-        <label for="icecoder">Icecoder</label><br>
-        <input type="radio" id="fried" class="theme" name="theme" value="fried">
-        <label for="fried">Fried</label><br>
+        <label class="container">Monokai
+          <input type="radio" id="monokai" class="theme" name="theme" value="monokai">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Material Darker
+          <input type="radio" id="material-darker" class="theme" name="theme" value="material-darker">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Nord
+          <input type="radio" id="nord" class="theme" name="theme" value="nord">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Panda Syntax
+          <input type="radio" id="panda-syntax" class="theme" name="theme" value="panda-syntax">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Icecoder
+          <input type="radio" id="icecoder" class="theme" name="theme" value="icecoder">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Fried
+          <input type="radio" id="fried" class="theme" name="theme" value="fried">
+          <span class="checkmark"></span>
+        </label>
       </form>
     </div>
 

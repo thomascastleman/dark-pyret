@@ -1,8 +1,5 @@
 To Do.
 
-Popup:
-- make radio interface nicer
-
 Syntax highlighting:
 - finish editing the following themes:
 	- material-darker

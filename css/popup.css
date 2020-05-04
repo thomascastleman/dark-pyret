@@ -10,7 +10,7 @@ body {
   padding-top: 2px;
   padding-bottom: 13px;
   background-color: #272822;
-  width: 150px;
+  width: 200px;
 }
 
 p {
@@ -29,4 +29,6 @@ p {
 
 #themes {
   color: white;
+  margin-top: 25px;
+  padding-left: 10px;
 }
