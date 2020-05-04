@@ -2,6 +2,7 @@ To Do.
 
 Syntax highlighting:
 - support multiple dark themes
+	- material?
 
 Editor:
 - Examplar chaff-catching test highlighting--make darker

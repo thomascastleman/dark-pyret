@@ -6,7 +6,6 @@
   color: #f8f8f2 !important;
 }
 
-.cm-s-default div.CodeMirror-selected { background: #49483E !important; }
 .cm-s-default .CodeMirror-line::selection, .cm-s-default .CodeMirror-line > span::selection, 
 .cm-s-default .CodeMirror-line > span > span::selection { background: rgba(73, 72, 62, .99) !important; }
 .cm-s-default .CodeMirror-line::-moz-selection, .cm-s-default .CodeMirror-line > span::-moz-selection, 
@@ -50,8 +49,11 @@
   color: white !important;
 }
 
-/*  This highlights regions (like fun ... end or beginnings and endings of parentheses)
-    Let's make them gray so as not to hurt the eyes. */
+/* this handles selected regions (by mouse dragging) */
+.cm-s-default div.CodeMirror-selected, span.CodeMirror-selectedtext { background: #49483E !important; }
+
+/*  Below handles regions automatically highlighted by Pyret
+    (e.g. "fun ... end") */
 div.CodeMirror span.CodeMirror-matchingbracket-region {
   position: relative;
   background-color: #43453b !important;
