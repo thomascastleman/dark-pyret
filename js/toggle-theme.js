@@ -38,6 +38,7 @@ function enableDarkTheme() {
   overrideSheets.map(sh => loadCSS(sh));
   loadCSS('themes/' + theme); // load the current theme
 }
+
 function disableDarkTheme() { 
   overrideSheets.map(sh => unloadCSS(sh)); 
   unloadCSS('themes/' + theme);   // unload the current theme
@@ -56,6 +57,7 @@ function setTheme(newTheme) {
   if (newTheme != theme) {
     unloadCSS('themes/' + theme);
     loadCSS('themes/' + newTheme);
+    overrideSheets.map(sh => loadCSS(sh));
     theme = newTheme;
   }
 }

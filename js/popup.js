@@ -20,8 +20,7 @@ function toggleDarkTheme() {
   });
 }
 
-function changeTheme(themeRadio) {
-  const newTheme = themeRadio.value;
+function changeTheme(newTheme) {
   setGlobalThemeChange(newTheme);
 
   // get all tabs currently in use
@@ -38,13 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // listen for changes in the checkbox in the popup
   document.getElementById("toggle").addEventListener("change", toggleDarkTheme);
 
-  // let themeOptions = document.getElementById("theme-form").theme; // get the theme radio
+  // add a listener to each theme radio
+  document.querySelectorAll('.theme').forEach(item => {
+    item.addEventListener('click', event => {
+      const themeID = event.target.id;
 
-  // for (let i = 0; i < themeOptions.length; i++) {
-  //   themeOptions[i].onclick = (() => {
-  //     console.log(this.value);
-  //   });
-  // }
+      changeTheme(themeID);
+    });
+  });
 });
 
 // record whether dark theme is on in global storage
