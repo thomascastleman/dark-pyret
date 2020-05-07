@@ -2,10 +2,11 @@ To Do.
 
 Syntax highlighting:
 - finish editing the following themes:
-	- material-darker
 	- panda-syntax
 	- icecoder
 	- fried
+- update README / chrome store screenshots
+
 
 Editor:
 - Examplar chaff-catching test highlighting--make darker

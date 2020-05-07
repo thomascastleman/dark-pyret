@@ -25,14 +25,6 @@
   border-left: 1px solid #FFCC00 !important;
 }
 
-.cm-s-default div.CodeMirror-selected {
-  background: rgba(97, 97, 97, 0.2) !important;
-}
-
-.cm-s-default.CodeMirror-focused div.CodeMirror-selected {
-  background: rgba(97, 97, 97, 0.2) !important;
-}
-
 .cm-s-default .CodeMirror-line::selection,
 .cm-s-default .CodeMirror-line>span::selection,
 .cm-s-default .CodeMirror-line>span>span::selection {
@@ -59,11 +51,6 @@
 
 .cm-s-default .cm-variable-2 {
   color: #EEFFFF !important;
-}
-
-.cm-s-default .cm-variable-3,
-.cm-s-default .cm-type {
-  color: #f07178 !important;
 }
 
 .cm-s-default .cm-builtin {
@@ -95,7 +82,7 @@
 }
 
 .cm-s-default .cm-variable {
-  color: #f07178 !important;
+  color: #d9d9d9 !important;
 }
 
 .cm-s-default .cm-tag {
@@ -120,7 +107,7 @@
 
 .cm-s-default .cm-variable-3,
 .cm-s-default .cm-type {
-  color: #DECB6B !important;
+  color: #89DDFF !important;
 }
 
 
@@ -129,7 +116,62 @@
   background-color: #FF5370 !important;
 }
 
+.cm-s-default .cm-function-name {
+  color: #f8f8f2 !important;
+}
+
+.cm-s-default .cm-roughnum {
+  color: #82AAFF !important;
+  font-weight: bold !important;
+}
+
+.cm-s-default .cm-boolean {
+  color: #FF5370 !important;
+  font-weight: bold !important;
+}
+
 .cm-s-default .CodeMirror-matchingbracket {
   text-decoration: underline !important;
-  color: white !important !important;
+}
+
+
+/* Interactions Window */
+.repl, #loader {
+  background-color: #212121 !important;
+}
+
+
+/* this handles selected regions (by mouse dragging) */
+.cm-s-default div.CodeMirror-selected, span.CodeMirror-selectedtext { background: #333333 !important; }
+
+
+/*  Below handles regions automatically highlighted by Pyret
+    (e.g. "fun ... end") */
+div.CodeMirror span.CodeMirror-matchingbracket-region {
+  position: relative;
+  background-color: #333333 !important;
+  border-top: 0.1em solid #333333 !important;
+  border-bottom: 0.1em solid #333333 !important;
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket-region:last-of-type {
+  box-shadow: 0.5em 0 0.25em #333333 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type {
+  box-shadow: -0.5em 0 0.25em #333333 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type:last-of-type {
+  box-shadow: -0.5em 0 0.25em #333333, 0.5em 0 0.25em #333333 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.open {
+box-shadow: -0.3ex 0 0.3ex #333333 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.open:last-of-type {
+box-shadow: 0.5em 0 0.25em #333333, -0.3ex 0 0.3ex #333333 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.close {
+box-shadow: 0.3ex 0 0.3ex #333333 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.close:first-of-type {
+box-shadow: -0.5em 0 0.25em #333333, 0.3ex 0 0.3ex #333333 !important;
 }

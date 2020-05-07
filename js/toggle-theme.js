@@ -38,7 +38,7 @@ function unloadCSS(file) {
 }
 
 // for all override sheets, load or unload them
-function enableDarkTheme() { 
+function enableDarkTheme() {
   overrideSheets.map(sh => loadCSS(sh));
   loadCSS('themes/' + theme); // load the current theme
 }
