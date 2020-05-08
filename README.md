@@ -7,6 +7,15 @@ Light Pyret             |  Dark Pyret
 :-------------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/thomascastleman/dark-pyret/master/images/light-pyret-demo.png)  |  ![](https://raw.githubusercontent.com/thomascastleman/dark-pyret/master/images/dark-pyret-demo.png)
 
+Now with multiple themes!
+Includes:
+- Monokai
+- Material
+- Nord
+- Panda Syntax
+- Icecoder
+- Fried (limited edition--designed by Raj Paul)
+
 ### Install
 Find it on the Chrome Web Store [here](https://chrome.google.com/webstore/detail/dark-pyret/jahmdeebfkoocpblokbimjnebdogpflo)!
 
