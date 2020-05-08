@@ -1,8 +1,6 @@
 To Do.
 
 Syntax highlighting:
-- finish editing the following themes:
-	- fried
 - update README / chrome store screenshots
 
 
