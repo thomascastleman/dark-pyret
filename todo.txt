@@ -1,9 +1,5 @@
 To Do.
 
-Syntax highlighting:
-- update README / chrome store screenshots
-
-
 Editor:
 - Examplar chaff-catching test highlighting--make darker
 	- check out https://pyret.cs.brown.edu/js/output-ui.js
