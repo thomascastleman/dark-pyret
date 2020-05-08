@@ -2,7 +2,6 @@ To Do.
 
 Syntax highlighting:
 - finish editing the following themes:
-	- panda-syntax
 	- icecoder
 	- fried
 - update README / chrome store screenshots

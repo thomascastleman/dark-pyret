@@ -53,7 +53,7 @@
 	color: #ff9ac1 !important;
 }
 .cm-s-default .cm-variable-3, .cm-s-default .cm-type {
-	color: #ff9ac1 !important;
+	color: #4dc6ff !important;
 }
 
 .cm-s-default .cm-def {
@@ -73,8 +73,8 @@
 .cm-s-default .CodeMirror-matchingbracket {
     border-bottom: 1px dotted #19F9D8 !important;
     padding-bottom: 2px !important;
-    color: #e6e6e6 !important;
 }
+
 .cm-s-default .CodeMirror-gutters {
     background: #292a2b !important;
     border-right-color: rgba(255, 255, 255, 0.1) !important;
@@ -82,4 +82,62 @@
 .cm-s-default .CodeMirror-linenumber {
     color: #e6e6e6 !important;
     opacity: 0.6 !important;
+}
+
+.cm-s-default .cm-builtin {
+	color: #cccccc !important;
+}
+
+.cm-s-default .cm-function-name {
+	color: #a8b3bd !important;
+}
+
+.cm-s-default .cm-boolean {
+	color: #b084eb !important;
+	font-weight: bold !important;
+}
+
+.cm-s-default .cm-roughnum {
+	color: #b084eb !important;
+	font-weight: bold !important;
+}
+
+/* this handles selected regions (by mouse dragging) */
+.cm-s-default div.CodeMirror-selected, span.CodeMirror-selectedtext { background: #3e4041 !important; }
+
+/*  Below handles regions automatically highlighted by Pyret
+    (e.g. "fun ... end") */
+div.CodeMirror span.CodeMirror-matchingbracket-region {
+  position: relative;
+  background-color: #3e4041 !important;
+  border-top: 0.1em solid #3e4041 !important;
+  border-bottom: 0.1em solid #3e4041 !important;
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket-region:last-of-type {
+  box-shadow: 0.5em 0 0.25em #3e4041 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type {
+  box-shadow: -0.5em 0 0.25em #3e4041 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type:last-of-type {
+  box-shadow: -0.5em 0 0.25em #3e4041, 0.5em 0 0.25em #3e4041 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.open {
+box-shadow: -0.3ex 0 0.3ex #3e4041 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.open:last-of-type {
+box-shadow: 0.5em 0 0.25em #3e4041, -0.3ex 0 0.3ex #3e4041 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.close {
+box-shadow: 0.3ex 0 0.3ex #3e4041 !important;
+}
+div.CodeMirror span.CodeMirror-matchingbracket.close:first-of-type {
+box-shadow: -0.5em 0 0.25em #3e4041, 0.3ex 0 0.3ex #3e4041 !important;
+}
+
+
+/* Interactions Window */
+.repl, #loader {
+  background-color: #292A2B !important;
 }
