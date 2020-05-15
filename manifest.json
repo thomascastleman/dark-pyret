@@ -14,7 +14,8 @@
     "matches": [
       "https://code.pyret.org/editor",
       "https://pyret.cs.brown.edu/assignment/*",
-      "https://cpo.herokuapp.com/editor"
+      "https://cpo.herokuapp.com/editor",
+      "http://cpo.herokuapp.com/editor"
     ]
   }],
   "background": {
