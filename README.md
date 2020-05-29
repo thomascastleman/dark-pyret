@@ -20,7 +20,7 @@ Includes:
 Find it on the Chrome Web Store [here](https://chrome.google.com/webstore/detail/dark-pyret/jahmdeebfkoocpblokbimjnebdogpflo)!
 
 ### Contributors
-Created by Thomas Castleman & Raj Paul. Icon design by Floria Tsui.
+Created by Thomas Castleman & Raj Paul. Logo/banner design by Floria Tsui.
 
 ### Feedback
 Found a bug? Something not look right? Let us know at darkpyret@gmail.com!
