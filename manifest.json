@@ -25,6 +25,7 @@
   "permissions" : ["tabs", "storage"],
   "web_accessible_resources": [
     "css/overrides/editor-override.css",
+    "css/overrides/home-override.css",
     "css/overrides/themes/*"
   ],
   "browser_action": {
