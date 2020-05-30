@@ -96,11 +96,7 @@ div.wrap, body, .footer {
   background-color: #262626 !important;
 }
 
-/*
-#file-picker-modal-tabs h2 {
-  color: #F8F8F2 !important;
-} */
-
+/* the NON-active tab of "Recent Files" or "New File" */
 .tab {
   color: #F8F8F2 !important;
 }
@@ -111,6 +107,7 @@ div.wrap, body, .footer {
   color: #262626 !important;
 }
 
+/* border around the modal in the center (and tabs) */
 .modal-body, #file-picker-modal-tabs {
   border: 2px solid #5c6052 !important;
 }
