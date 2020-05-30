@@ -1,9 +1,5 @@
 To Do.
 
-Homepage:
-- finish overrides for home page
-- add overrides for signed out page
-
 Editor:
 - Examplar chaff-catching test highlighting--make darker
 	- check out https://pyret.cs.brown.edu/js/output-ui.js
