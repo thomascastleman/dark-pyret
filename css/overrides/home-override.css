@@ -29,9 +29,14 @@ div.wrap, body, .footer {
   border-bottom: 2px solid #515346 !important;
 }
 
-/* "code.pyret.org" and email text in left of header */
-.logo-text, .person-text {
+/* "code.pyret.org" in left of header */
+.logo-text {
   color: #F8F8F2 !important;
+}
+
+/* email text in left of header */
+.person-text {
+  color: #bfbfbf !important;
 }
 
 /* footer div with "privacy" and "software" links */
