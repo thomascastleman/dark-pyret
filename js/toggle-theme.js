@@ -4,7 +4,7 @@ const editorOrAssgn = /(editor|assignment)/;
 const isEditor = editorOrAssgn.test(window.location.href);
 
 // stylesheets that apply the dark theme (either to homepage or editor)
-const homeOverrides = ['home-override'];
+const homeOverrides = ['login-override', 'home-override'];
 const editorOverrides = ['editor-override'];
 
 let theme = 'monokai';  // current theme
