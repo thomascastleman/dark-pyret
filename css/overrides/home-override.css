@@ -2,3 +2,109 @@
   Style overrides for the homepage of CPO/related sites
 */
 
+/* 
+Guidelines:
+  white nontext -> (dark gray) #36372f
+  light gray nontext -> (medium-dark gray)
+  medium gray nontext -> (lighter-than-medium-dark gray) #42453b
+  blue nontext -> ~teal/dark cyan
+  red nontext -> ~dark magenta
+
+
+
+  blue text -> #F8F8F2
+  gray text -> #F8F8F2
+  white text -> #F8F8F2
+  gray text -> #F8F8F2
+
+*/
+
+/* background white -> dark */
+div.wrap, body, .footer {
+  background-color: #36372f !important;
+}
+
+/* header div with "open editor" and "sign out" buttons */
+#header {
+  border-bottom: 2px solid #515346 !important;
+}
+
+/* "code.pyret.org" and email text in left of header */
+.logo-text, .person-text {
+  color: #F8F8F2 !important;
+}
+
+/* footer div with "privacy" and "software" links */
+.footer {
+  border-top: 1px solid #515346 !important;
+}
+
+/* links in the footer */
+.footer a {
+  color: #66D9EF !important;
+}
+
+/* "Sign out" "Open Editor" and other buttons */
+.auth-button, .start-button, .button {
+  background-color: #66D9EF !important;
+}
+
+/* "View in Google Drive" button */
+#select-file {
+  background-color: #F92672 !important;
+}
+
+/* the active tab of "Recent Files" or "New File" */
+.tab.active {
+  background-color: #66D9EF !important;
+}
+
+/* make all text in the file picker white */
+/* #file-picker-modal * {
+  color: #F8F8F2 !important;
+} */
+
+#loading-spinner * {
+  color: #F8F8F2 !important;
+}
+
+/* all file names / modify dates */
+#file-picker-modal .file-list * {
+  color: #F8F8F2 !important;
+}
+
+/* "New file name: " and ".arr" */
+.modal-body form label, .modal-body form span {
+  color: #F8F8F2 !important;
+}
+
+/* input for entering new file name */
+.modal-body form input.form { color: #555244 !important; }
+
+/* background */
+#file-picker-modal-tabs, #file-picker-modal-body {
+  background-color: #42453b !important;
+}
+
+#file-picker-modal-tabs h2 {
+  color: #F8F8F2 !important;
+}
+
+.modal-body, #file-picker-modal-tabs {
+  border: 2px solid #5c6052 !important;
+}
+
+/* modal body scrollbar */
+#file-picker-modal-body::-webkit-scrollbar {
+  width: 14px;
+  background-color: #5e6052 !important;;
+}
+
+#file-picker-modal-body::-webkit-scrollbar-thumb {
+  background-color: #9ea191 !important;
+  border-radius: 2px !important;
+}
+
+#file-picker-modal-body::-webkit-scrollbar-thumb:hover {
+  background-color: #aaad9f !important;
+}
