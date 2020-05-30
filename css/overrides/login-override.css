@@ -2,3 +2,12 @@
   Style overrides for the login page on CPO/related sites
 */
 
+/* main text on the login page */
+#root > div > div.main.middle.container p {
+  color: #F8F8F2 !important;
+}
+
+/* links on the login page */
+#root > div > div.main.middle.container a {
+  color: #66D9EF !important;
+}

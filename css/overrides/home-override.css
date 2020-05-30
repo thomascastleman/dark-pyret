@@ -50,7 +50,7 @@ div.wrap, body, .footer {
 }
 
 /* "Sign out" "Open Editor" and other buttons */
-.auth-button, .start-button, .button {
+.auth-button, .start-button, #start-button, .button {
   background-color: #66D9EF !important;
   color: #262626 !important;
 }
