@@ -1,8 +1,11 @@
 
-// stylesheets that apply the dark theme
-const overrideSheets = [
-  'editor-override'
-];
+// determine which situation we're in: editor or homepage
+const editorOrAssgn = /(editor|assignment)/;
+const isEditor = editorOrAssgn.test(window.location.href);
+
+// stylesheets that apply the dark theme (either to homepage or editor)
+const homeOverrides = ['home-override'];
+const editorOverrides = ['editor-override'];
 
 let theme = 'monokai';  // current theme
 let themeOn;  // are themes turned on
@@ -39,13 +42,15 @@ function unloadCSS(file) {
 
 // for all override sheets, load or unload them
 function enableDarkTheme() {
-  overrideSheets.map(sh => loadCSS(sh));
-  loadCSS('themes/' + theme); // load the current theme
+  let overrides = isEditor ? editorOverrides : homeOverrides;
+  overrides.map(sh => loadCSS(sh));
+  if (isEditor) loadCSS('themes/' + theme); // load the current theme
 }
 
 function disableDarkTheme() { 
-  overrideSheets.map(sh => unloadCSS(sh)); 
-  unloadCSS('themes/' + theme);   // unload the current theme
+  let overrides = isEditor ? editorOverrides : homeOverrides;
+  overrides.map(sh => unloadCSS(sh)); 
+  if (isEditor) unloadCSS('themes/' + theme);   // unload the current theme
 }
 
 // add or remove stylesheets based on whether dark theme is on/off
@@ -60,8 +65,8 @@ function toggleTheme(darkThemeOn) {
 
 function setTheme(newTheme) {
   if (newTheme != theme) {
-    // only load / unload sheets if themes are turned on
-    if (themeOn) {
+    // only load / unload sheets if themes are turned on (and we're in an editor)
+    if (themeOn && isEditor) {
       loadCSS('themes/' + newTheme);
       unloadCSS('themes/' + theme);
     }
