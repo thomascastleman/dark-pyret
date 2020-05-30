@@ -12,10 +12,10 @@
   "content_scripts": [{
     "js": ["js/toggle-theme.js"],
     "matches": [
-      "https://code.pyret.org/editor",
-      "https://pyret.cs.brown.edu/assignment/*",
-      "https://cpo.herokuapp.com/editor",
-      "http://cpo.herokuapp.com/editor"
+      "https://code.pyret.org/*",
+      "https://pyret.cs.brown.edu/*",
+      "https://cpo.herokuapp.com/*",
+      "http://cpo.herokuapp.com/*"
     ]
   }],
   "background": {
@@ -24,7 +24,6 @@
   },
   "permissions" : ["tabs", "storage"],
   "web_accessible_resources": [
-    "css/overrides/syntax-highlighting-override.css",
     "css/overrides/editor-override.css",
     "css/overrides/themes/*"
   ],
