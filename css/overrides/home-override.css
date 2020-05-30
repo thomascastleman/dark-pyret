@@ -83,8 +83,12 @@ div.wrap, body, .footer {
 .modal-body form input.form { color: #555244 !important; }
 
 /* individual filewrapper backgrounds */
-.file-wrapper {
+.file {
   background-color: #2F2F2F !important;
+}
+
+.file:hover {
+  background: #353535 !important;
 }
 
 /* background */
