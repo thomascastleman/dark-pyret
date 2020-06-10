@@ -47,6 +47,11 @@
   color: #F8F8F2 !important;
 }
 
+/* rational numbers and repeating decimals */
+.rationalNumber, .rationalRepeat {
+  color: #f8f8f2 !important;
+}
+
 /* ------------------- ERROR MESSAGES ------------------- */
 
 /* compile error with no highlighting */

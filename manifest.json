@@ -1,6 +1,6 @@
 {
   "name": "Dark Pyret",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "manifest_version": 2,
   "description": "Dark mode for the Pyret editor on code.pyret.org",
   "short_name": "dark-pyret",
