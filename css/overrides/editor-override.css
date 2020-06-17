@@ -162,6 +162,11 @@ th {
   border-right: 1px #abaf9d solid !important;
 }
 
+/* table row on its own */
+.pyret-row {
+  background-color: #515346 !important;
+}
+
 
 /* ---------------------- SPINNY PYRET LOADING SCREEN ---------------------- */
 
