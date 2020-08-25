@@ -1,7 +1,7 @@
 ![](https://raw.githubusercontent.com/thomascastleman/dark-pyret/master/images/dark-pyret-banner.png)
 
 # dark-pyret
-A Chrome extension for Pyret dark theme in [code.pyret.org](https://code.pyret.org/). Toggle easily back and forth between the standard light mode and our dark mode, which includes Monokai-like syntax highlighting for Pyret.
+A Chrome extension for Pyret dark themes in [code.pyret.org](https://code.pyret.org/). Toggle easily back and forth between the standard light mode and our dark modes.
 
 Light Pyret             |  Dark Pyret
 :-------------------------:|:-------------------------:
@@ -9,12 +9,10 @@ Light Pyret             |  Dark Pyret
 
 Now with multiple themes!
 Includes:
+- Base-16
+- Material Darker
 - Monokai
-- Material
-- Nord
 - Panda Syntax
-- Icecoder
-- Fried (limited edition--designed by Raj Paul)
 
 ### Install
 Find it on the Chrome Web Store [here](https://chrome.google.com/webstore/detail/dark-pyret/jahmdeebfkoocpblokbimjnebdogpflo)!

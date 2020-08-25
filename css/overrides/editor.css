@@ -1,0 +1,2412 @@
+
+/* --------- Color variables that stay constant across themes --------- */
+:root {
+
+  --font-stack: "Fira Mono","DejaVu Sans Mono","Inconsolata",monospace;
+
+  /* 
+  - border on .CodeMirror, .inlineExample
+  - border on .check 
+  - border on .progressStep 
+  - box-shadow on .highlight.emphasize:not(:hover)::before 
+  - bg on .modal 
+  - text in .instructionsWidget
+  - border around ui-dialog
+  - border on .module-info-hover */
+  --default-border: black;
+
+  /* 
+  - box-shadow on div.spy-block
+  - box-shadow on .check-block
+  - box-shadow on .replImageThumbnail canvas
+  - box-shadow on .compile-error
+  - box-shadow on .parse-error 
+  - box-shadow on .menuContents 
+  - box-shadow on .dropdown:hover (aside run button)
+  - bg on .modal-header
+  - bg on .modal-footer 
+  - bg on .menuContents div:not(.disabled):not(.inert):hover
+  - box-shadow on #runButton, #breakButton (also on hover)
+  - box-shadow on #run-dropdown-content li:hover
+  - box-shadow on table.pyret-table thead
+  - box-shadow on table.pyret-row th
+  - box-shadow on table.pyret-row
+  - box-shadow on .modal-content
+  - box-shadow on modal submit and close (also hover)
+  - .modal-content box-shadow */
+  --shadow-color: rgba(0,0,0,0.25);
+
+  /* 
+  - border on div#font
+  - border on #font-label
+  - box-shadow on .dropdown
+  - box-shadow on #run-dropdown-content li
+  - bg on div#font and div#font:hover */
+  --shadow-lighter: rgba(0,0,0,0.1);
+
+  /* 
+  - box-shadow of snippet with stacktrace when hovered
+  - .modal bg with opacity */
+  --shadow-darker: rgba(0,0,0,0.4);
+
+  /* - bg on .check-success */
+  --bg-check-success: #cfc;
+
+  /* - bg on .check-failure */
+  --bg-check-failure: #d66;
+
+  /* - bg of .error-bg */
+  --error-bg: #FF9494;
+
+  /* 
+  - text in .notificationArea .error
+  - text in .notificationArea .autoCorrect-button
+  - border on .error-highlight
+  - color of .error-icon */
+  --error: #F44336;
+
+  /* 
+  - bg on .progressStep.done
+  - text in .progressDone */
+  --progress-done: green;
+
+  /* - bg on #program-name-container input */
+  --prgm-name-bg: #FEFEFE;
+
+  /* 
+  - text in .notificationArea .active 
+  - text in .notificationArea .autoCorrect-msg */
+  --notif-area-text: #eee;
+
+  /* 
+  - color in .test-reason:empty, .check-block-error:empty */
+  --empty-check-text: #555;
+
+  /* 
+  - bg on .cptteach-fixed */
+  --cptteach-bg: #ddd;
+
+  /* 
+  - "Programming as ..." text in #welcome
+  - options in Run dropdown
+  - bg on .module-info-hover
+  - text in .modal-footer
+  - text in .stale.test-results .stale-warning */
+  --light-text: #eeeeee;
+
+  /* - bg on .notificationArea */
+  --notif-area-bg: #111111;
+
+  /* - bg on New/Save/Download/etc menu (.menuContents) */
+  --menu-contents-bg: #EFEFEF;
+
+  /*
+  - border around expanded objects (.replOutput.expanded > dl) */
+  --repl-obj-border: gray;
+
+  /* 
+  - text in .menuContents div.disabled * */
+  --menu-disabled: gray;
+
+  /* 
+  - text in .menuButton and .menuContents */
+  --menu-text: #000;
+
+  /*
+  - bg on .info-btn (question mark) in Bonnie menu */
+  --info-button-bg: #317bcf;
+
+  /* - bg on .info-btn:hover */
+  --info-button-hover: #0060ce;
+
+  /* 
+  - bg on #runButton
+  - bg on #runPart
+  - bg on .dropdown (beside Run)
+  - bg on #run-dropdown-content li
+  - bg on .choiceContainer > button
+  - bg on .modal .submit  */
+  --run-bg: #317bcf;
+
+  /* 
+  - bg on #runButton:hover
+  - bg on #run-dropdown-content li:hover
+  - bg on .dropdown:hover
+  - bg on .modal .submit:hover */
+  --run-hover: #0060ce;
+
+  /* 
+  - bg color of #breakButton 
+  - bg of .modal .close */
+  --stop-bg: #CF3B31;
+
+  /* 
+  - hover bg of #breakButton
+  - hover bg of .modal .close */
+  --stop-hover: #B30C00;
+
+  /* - .replOutputPassed */
+  --repl-out-passed: #1f9180;
+
+  /* - .replOutputFailed */
+  --repl-out-failed: #af1180;
+
+  /* - text color in .test-reason, .nestedReason */
+  --reason-text: #af1180;
+
+  /* - bg on .error-highlight */
+  --err-highlight: #fcc;
+
+  /* - bg of .emphasize-line */
+  --emph-line-bg: #BBB;
+
+  /* - bg on .check-highlight */
+  --check-highlight-bg: #CCF;
+
+  /* - border on .check-highlight */
+  --check-highlight-border: #33F;
+
+  /* - part of gradient in .warning-upper and .warning-lower */
+  --warning-gradient-1: hsla(0,100%,89%,1);
+
+  /* - part of gradient in .warning-upper and .warning-lower */
+  --warning-gradient-2: rgba(145,78,78,0);
+
+  /* - bg on .ui-dialog-titlebar (hidden by ui-widget-header) */
+  --ui-dialog-title-bg: #2a348b;
+
+  /* - bg & box-shadow of .editor-check-block-success */
+  --success-bg: hsl(88, 50%, 76%);
+
+  /* - bg & box-shadow on .editor-check-block-failed */
+  --fail-bg: hsl(45, 100%, 85%);
+
+  /* - gutter marker bg for errored test */
+  --err-gutter: hsla(0, 100%, 50%, 0.5);
+
+  /* - color of .choiceContainer > button */
+  --choice-button: #fff;
+
+  /* - .modal-content bg */
+  --modal-content-bg: #C8C8C8;
+
+  /* - .modal-content border */
+  --modal-content-border: #888;
+
+  /* - bg of .stale.test-results .stale-warning */
+  --stale-warning-bg: hsl(212, 30%, 50%);
+
+  /* 
+  - bg of .stale.test-results .check-block-failed
+  and .testing-summary .summary-failed */
+  --stale-fail-bg: hsl(45,30%,85%);
+
+  /* 
+  - bg of .stale.test-results .check-block-success
+  and .testing-summary .summary-passed */
+  --stale-success-bg: hsl(88, 30%, 76%);
+
+  /* - bg of .stale.test-results .check-block-errored */
+  --stale-err-bg: hsl(0, 30%, 85%);
+
+  /* 
+  - bg of .stale.test-results .check-block-test.failing-test:not(.highlights-active) */
+  --stale-fail-no-highlight: hsl(45, 30%, 93%);
+
+  /* - bg of .stale.test-results .check-block-test.highlights-active */
+  --stale-highlight: hsl(45,0%,95%);
+
+  /* - bg of .stale.test-results .check-block-test.highlights-active > header */
+  --stale-highlight-header: hsl(45, 50%, 85%);
+
+  /* - bg of .stale.test-results .check-block-test.passing-test */
+  --stale-passing-test: hsl(90, 10%, 91%);
+
+  /* - bg of .stale.test-results .testing-summary .summary-errored */
+  --stale-err-summary: hsl(0, 30%, 70%);
+
+  /* - bg of .stale compile errors/tests with highlights active */
+  --stale-err-highlight: hsl(204, 40%, 74%);
+
+  /*  - bg on .topbar  */
+  --topbar-bg: #eee;
+
+  /*
+  - bg on .ui-dialog 
+  - text in .ui-dialog-title */
+  --ui-dialog-default: #eee;
+
+  /* - bg color that dims around ui-widget */
+  --ui-widget-dim: #111;
+
+  /* background on image thumbnails in REPL */
+  --img-thumbnail-bg: white;
+
+}
+
+html, body { height: 100%; }
+
+body.legacy {
+  background: var(--background);
+}
+
+body.legacy .CodeMirror,
+body.legacy .inlineExample {
+  border: 1px solid var(--default-border);
+  background: var(--background);
+  color: var(--default-text);
+  font-family: var(--font-stack);
+}
+body.legacy .CodeMirror {
+  font-size: 1em;
+  line-height: calc(1em + 2px);
+}
+body.legacy .replMain .CodeMirror {
+  border-top: none;
+  border-bottom: none;
+}
+body.legacy .repl .CodeMirror {
+  background-color: var(--cm-in-repl-bg);
+  border: none;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+body.legacy .CodeMirror div.CodeMirror-cursors { z-index: 9500; }
+body.legacy .CodeMirror div.CodeMirror-cursor { border-left: 2px solid var(--cursor); }
+body.legacy .CodeMirror div.CodeMirror-ruler { z-index: 100; }
+body.legacy .CodeMirror div.CodeMirror-ruler.hidden { display: none; }
+body.legacy .cm-s-default.CodeMirror { color: var(--default-text); }
+body.legacy .cm-s-default .cm-comment { color: var(--comments); }
+body.legacy .cm-s-default .cm-boolean { color: var(--booleans); }
+body.legacy .cm-s-default .cm-builtin { color: var(--built-ins); }
+body.legacy .cm-s-default .cm-function-name { color: var(--function-names); }
+body.legacy .cm-s-default .cm-variable { color: var(--variables); }
+body.legacy .cm-s-default .cm-keyword { color: var(--keyword); font-weight: bold; }
+body.legacy .cm-s-default .cm-number { color: var(--numbers); }
+body.legacy .cm-s-default .cm-roughnum { color: var(--rough-nums); }
+body.legacy .cm-s-default .cm-bad-number { color: var(--bad-numbers); font-weight: bold; }
+body.legacy .cm-s-default .cm-string { color: var(--strings); }
+body.legacy .cm-s-default .cm-unterminated-string { color: var(--unterm-strings); font-weight: bold; }
+body.legacy .cm-s-default .cm-type { color: var(--types); }
+body.legacy .cptteach-fixed { line-height: 1.5; background: var(--cptteach-bg); }
+
+body.legacy div.CodeMirror-selected,
+body.legacy span.CodeMirror-selectedtext {
+  background-color: var(--selected-text) !important;
+}
+
+body.legacy .CodeMirror-matchingbracket {
+  position: relative;
+}
+
+body.legacy .CodeMirror-matchingbracket::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 0px solid var(--matching-brackets);
+  z-index: 1000;
+}
+
+body.legacy .CodeMirror-matchingbracket.open::before {
+  border-width: 0.3ex 0px 0px 0.3ex;
+  border-top-left-radius: 0.4ex;
+  margin: -0.3ex;
+}
+
+body.legacy .CodeMirror-matchingbracket.close::before {
+  border-width: 0px 0.3ex 0.3ex 0px;
+  border-bottom-right-radius: 0.4ex;
+  margin: 0.3ex;
+}
+
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket-region {
+  position: relative;
+  background-color: var(--matching-region-bg);
+  border-top: 0.1em solid var(--matching-region-bg);
+  border-bottom: 0.1em solid var(--matching-region-bg);
+}
+
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket-region:last-of-type {
+    box-shadow: 0.5em 0 0.25em var(--matching-region-bg);
+}
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type {
+    box-shadow: -0.5em 0 0.25em var(--matching-region-bg);
+}
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket-region:first-of-type:last-of-type {
+    box-shadow: -0.5em 0 0.25em var(--matching-region-bg), 0.5em 0 0.25em var(--matching-region-bg);
+}
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket.open {
+  box-shadow: -0.3ex 0 0.3ex var(--matching-region-bg);
+}
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket.open:last-of-type {
+  box-shadow: 0.5em 0 0.25em var(--matching-region-bg), -0.3ex 0 0.3ex var(--matching-region-bg);
+}
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket.close {
+  box-shadow: 0.3ex 0 0.3ex var(--matching-region-bg);
+}
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket.close:first-of-type {
+  box-shadow: -0.5em 0 0.25em var(--matching-region-bg), 0.3ex 0 0.3ex var(--matching-region-bg);
+}
+
+/* bold ends of matching bracket regions (unless variables) */
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket:not(.cm-variable) {
+  font-weight: 600;
+  /* color: initial; */
+}
+
+/* ensure keywords, built-ins, & variables retain their color when
+  highlighted as matching brackets */
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket.cm-keyword {
+  color: var(--keyword);
+}
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket.cm-builtin {
+  color: var(--built-ins);
+}
+body.legacy div.CodeMirror span.CodeMirror-matchingbracket.cm-variable {
+  color: var(--variables);
+}
+
+body.legacy div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  font-weight: bold;
+  background-color: var(--nonmatching-bg-2);
+  color: var(--nonmatching-brackets);
+}
+
+body.legacy div.CodeMirror span.CodeMirror-nonmatchingbracket-region {
+  background-color: var(--nonmatching-bg);
+  border-top: 0.1em solid var(--nonmatching-bg-2);
+  border-bottom: 0.1em solid var(--nonmatching-bg-2);
+  z-index: 4000;
+}
+
+body.legacy #REPL {
+  font-family: sans-serif;
+}
+
+/* get rid of outline that automatically shows on focus */
+body.legacy #REPL:focus,
+body.legacy .repl:focus {
+  outline: none !important;
+}
+
+body.legacy .replTextOutput {
+  font-family: var(--font-stack);
+  border: none;
+  background-color: transparent;
+  white-space: pre;
+}
+
+body.legacy .replToggle {
+  cursor: pointer;
+}
+
+body.legacy div.trace {
+  overflow-x: auto;
+}
+body.legacy div.trace.error {
+   background-color: var(--trace-err-bg);
+}
+body.legacy span.trace {
+   padding-right: 1em;
+   font-size: 85%;
+   display: none;
+}
+body.legacy span.trace:after {
+   content: ":";
+}
+
+body.legacy div.spy-block {
+  font-family: sans-serif;
+  clear: both;
+  border: 1px solid var(--spy-borders);
+  padding: 0.2em;
+  box-shadow: 0px 4px 5px var(--shadow-color);
+  border-radius: 3px;
+  background: var(--spy-bg);
+  margin: 6px;
+}
+
+/* labels aren't highlighted, but are a.highlight elements */
+body.legacy div.spy-block a.highlight {
+  color: var(--inactive-highlight-text) !important;
+}
+
+body.legacy div.spy-block > .spy-title {
+   display: block;
+   width: 100%;
+   border-bottom: 1px solid var(--spy-borders);
+   margin-left: -3px;
+   margin-right: -3px;
+   padding-left: 3px;
+   padding-right: 3px;
+}
+
+body.legacy div.spy-block > img.spyglass {
+   float: right;
+   width: 50px;
+   position: relative;
+   z-index: 1;
+}
+
+body.legacy div.spy-block > table {
+   margin: 3px;
+   margin-bottom: 0px;
+   background: transparent;
+   overflow: scroll;
+}
+
+body.legacy div.spy-block > table > tbody > tr {
+    background: var(--spy-odd-rows-bg);
+    border: 1px solid var(--spy-borders);
+}
+
+body.legacy div.spy-block > table > tbody > tr:nth-child(even) {
+    background: var(--spy-even-rows-bg);
+}
+
+body.legacy div.spy-block > table > tbody > tr > td {
+    border-right:  1px solid var(--spy-borders);
+}
+
+body.legacy div.spy-block > table > tbody > tr > td:first-child {
+    vertical-align: middle;
+}
+
+body.legacy div.spy-block > table > tbody > td {
+    border: 1px solid;
+}
+
+body.legacy div.spy-block > table > th { display: none; }
+
+body.legacy .test-reason:not(.highlights-active) .highlight {
+  background: initial!important;
+}
+
+body.legacy #output > .compile-error:not(.highlights-active):hover:after,
+body.legacy .check-block-error > .compile-error:not(.highlights-active):hover::after,
+body.legacy .check-block-test.failing-test:not(.highlights-active):hover {
+    box-shadow: 0 0 2em var(--err-hover-shadow);
+    transform: scale(1.01);
+    backface-visibility: hidden;
+    transition: scale(1.01) .2s linear;
+    border-image-outset: 5px;
+}
+
+body.legacy #output > .compile-error:not(.highlights-active):hover:after,
+body.legacy .check-block-error > .compile-error:not(.highlights-active):hover::after,
+body.legacy .check-block-test.failing-test:not(.highlights-active):hover::after{
+    content:'';
+    position:absolute;
+    height:100%;
+    width:100%;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.0) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%);
+    top:0;
+    left:0;
+    background-size: cover;
+    cursor: pointer;
+    background-position: 100em;
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    animation: 0.7s shine linear 1;
+}
+
+@keyframes shine {
+  from {background-position:0%;}
+  to   {background-position:100em;}
+}
+
+body.legacy #output > .compile-error:not(.highlights-active) > *,
+body.legacy .check-block-error > .compile-error:not(.highlights-active) > *,
+body.legacy .check-block-test.failing-test:not(.highlights-active) .test-reason {
+  opacity: 0.5;
+}
+
+body.legacy .check-block-header {
+    cursor: pointer;
+}
+
+body.legacy .inlineExample {
+  font-family: var(--font-stack);
+  padding: 0 2px;
+}
+
+/* from http://codemirror.net/demo/resize.html */
+body.legacy .CodeMirror {
+  height: auto;
+}
+
+body.legacy .CodeMirror-scroll {
+  overflow-y: scroll;
+  overflow-x: auto;
+  height: auto;
+}
+
+
+body.legacy .replMain .CodeMirror {
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-right: none; /* Resizable */
+}
+body.legacy .replMain .CodeMirror-scroll {
+  height: 100%;
+}
+
+body.legacy .repl {
+  padding-left: 1em;
+  padding-bottom: 5em;
+  padding-top: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: var(--background) !important;
+  cursor: text;
+}
+body.legacy .check {
+  font-family: var(--font-stack);
+  border: 1px solid var(--default-border);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
+}
+
+body.legacy .check-success {
+  background-color: var(--bg-check-success);
+}
+
+body.legacy .check-failure {
+  background-color: var(--bg-check-failure);
+}
+
+body.legacy .check-block {
+  border: none;
+  border-radius: 3px;
+  margin: .5em;
+  padding: .5em;
+  box-shadow: 0px 2px 4px var(--shadow-color);
+  background: var(--check-block-default-bg);
+  position:relative;
+  cursor:default;
+}
+
+body.legacy .check-block-tests,
+body.legacy .check-block-error{
+  margin-top: .5em;
+}
+
+
+body.legacy .check-block-failed {
+  background-color: var(--check-fail-bg);
+}
+
+body.legacy .check-block-errored {
+  background-color: var(--check-error-bg);
+}
+
+body.legacy .check-block-success {
+  background-color: var(--check-success-bg);
+  margin: 5px;
+}
+
+body.legacy .check-block-summary {
+  display: block;
+  font-style: italic;
+}
+
+body.legacy .testing-summary{
+  color: var(--testing-summary);
+  background: var(--testing-summary-bg);
+}
+
+body.legacy .check-block-test{
+  position: relative;
+  overflow: hidden;
+  padding-bottom: .5em;
+}
+
+body.legacy .check-block-test:not(:last-child) {
+  margin-bottom: 0.75em;
+}
+
+body.legacy .check-block-test {
+  background-image: linear-gradient(0deg,hsla(0, 0%, 0%,.5),hsla(0, 0%, 0%, 0));
+  background-size: 100% .3em;
+  background-position:bottom;
+  background-repeat: no-repeat;
+}
+
+
+body.legacy .check-title{
+  padding: 5px;
+  margin: -5px;
+}
+
+body.legacy .expandText{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  margin: .5em;
+  text-decoration: underline;
+}
+
+body.legacy .repl-output {
+  padding: 0;
+  margin: 0;
+}
+
+body.legacy .steppedGutter {
+  width: 25px;
+}
+
+
+body.legacy .progressContainer {
+  width: 90%;
+  height: 2em;
+  padding: 5px;
+  text-align: center;
+}
+
+body.legacy .progressStep {
+  display: inline-block;
+  vertical-align: top;
+  height: 10px;
+  border: 1px solid var(--default-border);
+}
+
+body.legacy .progressStep.done {
+  background-color: var(--progress-done);
+}
+
+body.legacy .progressDone {
+  color: var(--progress-done);
+  font-style: italic;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+body.legacy .steppedGutterPart {
+  width: 25px;
+  padding-right: 3px;
+}
+
+body.legacy .instructionsWidget {
+  background-color: #fcf;
+  border: 1px dotted #c0c;
+  color: var(--default-border);
+  padding: 3px;
+  margin: 5px;
+  cursor: pointer;
+  margin: 5px 5px 5px auto;
+}
+
+body.legacy .instructionsWidget.hidden {
+  width: 90px;
+}
+
+body.legacy .instructionsWidget .instructionsContent {
+  font-family: serif;
+}
+
+body.legacy .instructionsWidget .toggleInstructions {
+  color: #666;
+  float: right;
+  font-size: 0.8em;
+  padding: 3px;
+}
+
+body.legacy .prompt-container {
+  padding-top: 5px;
+}
+body.legacy .echo-container {
+  overflow: hidden;
+  padding-top: 5px;
+}
+
+body.legacy .repl-prompt {
+  width: 100%;
+  display: inline-block;
+}
+
+body.legacy .repl-prompt-sign::before {
+  content: '\203a\203a\203a';
+  display: inline;
+  line-height: calc(1em + 10px);
+  float: left;
+}
+
+body.legacy .repl-prompt-arrow {
+  font-family: var(--font-stack);
+  vertical-align: top;
+  display: inline-block;
+}
+
+body.legacy .repl-echo {
+  width: 100%;
+  display: inline-block;
+}
+
+body.legacy .repl-echo .CodeMirror-cursors {
+  display: none;
+}
+
+body.legacy {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* prevent the editor to have scroll bar (we use a trick to move a dialog to
+  the bottom of the screen so that users can't see, and need to hide the scroll
+  bar as a result) */
+}
+
+/* also different on cpo.herokuapp.com */
+/* 
+body.legacy .replMain {
+  position: absolute;
+  z-index: 8500;
+  left: 0;
+  width: 50%;
+  top:0;
+  height: 100%;
+  max-height: 100%;
+  padding-top: 40px;
+  padding-bottom: 2.5rem;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin:0;
+} */
+
+body.legacy.hideFooter .replMain {
+  padding-bottom: 0rem;
+}
+
+body.legacy.hideHeader #main {
+  padding-top: 0px;
+}
+
+body.legacy.hideHeader .replMain {
+  padding-top: 0px;
+}
+
+body.legacy.smallHeader .replMain {
+  padding-top: 25px;
+}
+
+/* also different on cpo.herokuapp.com */
+/* body.legacy .replContainer {
+  position: absolute;
+  z-index: 8500;
+  left: 50%;
+  right: 0;
+  width: 50%;
+  top:0;
+  height: 100%;
+  max-height: 100%;
+  padding-top: 40px;
+  padding-bottom: 2.5rem;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin:0;
+} */
+
+body.legacy.hideFooter .replContainer {
+  padding-bottom: 0rem;
+}
+
+body.legacy.hideHeader .replContainer {
+  padding-top: 0px;
+}
+
+body.legacy.smallHeader .replContainer {
+  padding-top: 25px;
+}
+
+body.legacy #main {
+  width: 100%;
+  z-index: 5000;
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 12px;
+}
+
+body.legacy #program-name-container {
+  display: inline-block;
+  font-family: sans-serif;
+  vertical-align:top;
+  float:left;
+  height:100%;
+}
+
+body.legacy #program-name-container input {
+  display: inline-block;
+  height: 40px;
+  padding: 5px;
+  vertical-align:top;
+  border:none;
+  font-size: 18px;
+  background: var(--prgm-name-bg);
+  float:left;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body.legacy #program-name-container label {
+  display: inline-block;
+}
+
+body.legacy #saveButton {
+}
+
+body.legacy #shareContainer {
+  display: inline-block;
+  height: 100%;
+  float:left;
+}
+
+body.legacy #shareContainer div {
+  height:100%
+}
+
+body.legacy #welcome {
+  color: var(--light-text);
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 50%;
+  float: left;
+}
+
+body.legacy #welcome .username-message {
+  vertical-align: middle;
+  line-height: normal;
+  padding-left: 2em;
+  font-family: sans-serif;
+}
+
+/* this was causing an unexpected dark rectangle in cpo.herokuapp.com */
+/* body.legacy .notificationArea {
+  background: var(--notif-area-bg);
+  max-width: 50%;
+  float: right;
+  font-family: sans-serif;
+  height: 2.5rem;
+  line-height: 2.5rem;
+} */
+
+body.legacy .notificationArea span {
+  vertical-align: middle;
+  padding-right: 2em;
+  line-height: normal;
+  display: inline-block;
+}
+
+body.legacy .notificationArea .active {
+  color: var(--notif-area-text);
+}
+
+body.legacy .notificationArea .error {
+  color: var(--error);
+  font-weight: bold;
+}
+
+body.legacy .notificationArea .autoCorrect{
+  cursor:pointer;
+}
+
+body.legacy .notificationArea .autoCorrect-msg{
+  color: var(--notif-area-text);
+}
+
+body.legacy .notificationArea .autoCorrect-button{
+  color: var(--error);
+  font-weight: bold;
+  float:right;
+}
+
+body.legacy .logoutOnly {
+  display: none;
+}
+
+body.legacy .loginOnly {
+  display: none;
+}
+
+body.legacy #bonniemenuContents {
+  min-width: 200px;
+}
+body.legacy #filemenuContents {
+  min-width: 200px;
+}
+body.legacy #filemenuContents .hidden { display: none; }
+
+body.legacy .menuContents {
+  background-color: var(--menu-contents-bg);
+  border: none;
+  box-shadow: 0px 2px 3px var(--shadow-color);
+  overflow:hidden;
+  max-width: min-content;
+}
+
+body.legacy .menuContents div:not(.disabled):not(.inert):hover{
+  transition: box-shadow 0.2s;
+  background-color: var(--shadow-color);
+}
+
+body.legacy .menuContents div.disabled * {
+   color: var(--menu-disabled);
+   cursor: default;
+}
+
+body.legacy .menuButton *,
+body.legacy .menuContents * {
+  color: var(--menu-text);
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+body.legacy .menuButton > *, 
+body.legacy .menuContents > * {
+  /* padding: 10px; */
+  display: block;
+}
+
+body.legacy .menuContents > .menuButton * {
+  padding: initial;
+}
+
+body.legacy #theme {
+  padding: 10px;
+}
+
+body.legacy .info-btn {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  border-radius: 100%;
+  font-family: var(--font-stack);
+  font-size: 1em;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: var(--info-button-bg);
+}
+
+body.legacy .info-btn:hover {
+  background-color: var(--info-button-hover);
+}
+
+body.legacy div#font{
+  min-width: 180px;
+  border: 1px solid var(--shadow-lighter);
+  border-left: 0px;
+  border-right: 0px;
+  background:var(--shadow-lighter);
+  padding: 0px;
+}
+
+body.legacy div#font:hover{
+  background:var(--shadow-lighter);
+  box-shadow: none;
+}
+
+body.legacy #font div{
+  margin:0;
+  padding: 10px 0px;
+  text-align:center;
+  display: inline-block;
+  font-family:sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; /* Webkit */
+  -moz-user-select: none;  /* Firefox */
+  -ms-user-select: none;   /* IE 10  */
+  -o-user-select: none;
+  user-select: none;
+}
+
+body.legacy #font-plus{
+  width: 20%;
+  cursor: pointer;
+}
+
+body.legacy #font-minus{
+  width: 20%;
+  cursor: pointer;
+}
+
+body.legacy #font-label{
+  width: calc(60% - 2px);
+  cursor: default;
+  padding: 10px 5px;
+  border: 1px solid var(--shadow-lighter);
+  border-top:none;
+  border-bottom:none;
+}
+
+body.legacy div#font-label:hover{
+  background:none;
+  box-shadow:none;
+}
+
+body.legacy .replPrint {
+  font-family: var(--font-stack);
+  padding-top: 0;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  color: var(--repl-print);
+}
+
+body.legacy .replOutput {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  color: var(--repl-output);
+  display: inline-block;
+  font-family: var(--font-stack);
+}
+
+body.legacy .replOutput .replOutput {
+   padding-top: 0em;
+   padding-bottom: 0em;
+   margin-top: 0.2em;
+   margin-bottom: 0.2em;
+}
+
+body.legacy .replOutput ul.collection > li.expanded > span.contents > .replOutput,
+body.legacy .replOutput ul.inlineCollection > li.expanded > span.contents > .replOutput {
+   margin-top: 0em;
+   margin-bottom: 0em;
+}
+
+body.legacy .replToggle > .hidden { display: none; }
+
+/* definition lists for objects */
+body.legacy .replOutput.expanded > dl > .collapsed, 
+body.legacy .replOutput.expanded > .collapsed { display: none; }
+
+body.legacy .replOutput:not(.expanded) > dl > .expanded:not(.replOutput),
+body.legacy .replOutput:not(.expanded) > .expanded:not(.replOutput) { display: none; }
+
+body.legacy .replOutput.expanded > dl {
+   border: 1px solid var(--repl-obj-border);
+}
+
+body.legacy .replOutput > dl { display: inline; }
+body.legacy .replOutput.expanded > dl {
+   display: table;
+   clear: both;
+}
+body.legacy .replOutput > dl > dt.label:after {
+   content: ":";
+   padding-right: 0.5em;
+}
+body.legacy .replOutput > dl > dt { display: inline; }
+body.legacy .replOutput.expanded > dl > dt {
+   float: left;
+   clear: left;
+   padding: 0 1em;
+}
+body.legacy .replOutput > dl > dd { display: inline-block; }
+body.legacy .replOutput.expanded > dl > dd {
+   float: left;
+}
+body.legacy .replOutput > dl > dd:not(:last-of-type):after {
+   padding-right: 0.5em;
+}
+
+/* expandable lists for collections */
+body.legacy ul.collection { margin: 0; }
+body.legacy ul.collection > li {
+   margin-left: 1em;
+   clear: both;
+}
+body.legacy ul.collection > li > span.label:before { padding-left: 0.5em; }
+body.legacy ul.collection > li > span.label:after { content: ":"; padding-right: 0.5em; }
+body.legacy ul.collection > li > span.label.expandable:before { content: "\025B8"; }
+body.legacy ul.collection > li > span.contents {
+   display: none;
+}
+body.legacy ul.collection > li.expanded > span.contents { display: inline; }
+body.legacy ul.collection > li.expanded > span.label.expandable:before { content: "\025BE"; }
+
+body.legacy ul.inlineCollection {
+  display: inline;
+  margin: 0;
+}
+body.legacy ul.inlineCollection > li {
+  display: inline;
+}
+body.legacy ul.inlineCollection > li > span.label {
+  display: none;
+}
+
+body.legacy .replOutputPassed {
+  padding-top: 0;
+  padding-bottom: 0.5em;
+  color: var(--repl-out-passed);
+}
+
+body.legacy .replOutputFailed {
+  padding-top: 0;
+  padding-bottom: 0.5em;
+  color: var(--repl-out-failed);
+}
+
+body.legacy .test-reason, 
+body.legacy .nestedReason {
+ padding-top: 0;
+ color: var(--reason-text);
+}
+
+body.legacy .rationalNumber {
+ color: var(--rationals);
+}
+
+body.legacy span.rationalRepeat {
+  text-decoration: overline;
+}
+
+body.legacy .replRef {
+  outline: 2px dashed #ffcc00;
+  box-shadow: 0 0 0 2px black;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 2px;
+}
+
+body.legacy .has-icon { position: relative; }
+
+body.legacy .replImageThumbnail canvas {
+  cursor: pointer;
+  box-shadow: 0px 2px 4px var(--shadow-color);
+  margin: 2px;
+  position: relative;
+  background-color: var(--img-thumbnail-bg);
+}
+
+body.legacy .replImageThumbnail:hover canvas {
+  cursor: pointer;
+  box-shadow: 0px 2px 4px var(--img-thumbnail-shadow);
+  margin: 2px;
+}
+
+body.legacy .has-icon .info-icon {
+   display: none;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+}
+
+body.legacy .has-icon .info-icon-top {
+   display: none;
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+body.legacy .has-icon:hover .info-icon-top {
+   cursor: pointer;
+   display: initial;
+}
+
+body.legacy .has-icon:hover .info-icon {
+   cursor: pointer;
+   display: initial;
+}
+
+body.legacy .error-highlight {
+  background-color: var(--err-highlight) !important;
+  border-bottom: 2px solid var(--error) !important;
+}
+
+body.legacy .loc-anchor {
+  border-bottom: 2px solid currentColor;
+}
+
+body.legacy .test-reason {
+  padding: 0.5em;
+  color: var(--default-text);
+}
+
+body.legacy .test-reason > br,
+body.legacy .compile-error > br,
+body.legacy .parse-error > br {
+  display:none;
+}
+
+body.legacy .test-reason,
+body.legacy .parse-error,
+body.legacy .compile-error {
+  display: block;
+  position: relative;
+  line-height: 1.5;
+}
+
+body.legacy .compile-error > p > code:only-child {
+  margin-left: 1.5em;
+}
+
+/*  colored text highlights within highlights-active blocks,
+    but that do not default to having their highlight on */
+body.legacy a.highlight {
+  color: var(--inactive-highlight-text) !important;
+}
+
+/*  text highlights in highlights-active blocks that default
+    to highlighted background */
+body.legacy a.highlight.highlight-on,
+body.legacy a.highlight.highlight-on .replTextOutput {
+  color: var(--active-highlight-text) !important;
+}
+
+/*  colored text highlights within non- highlights-active blocks
+    (dark themes make this lighter so text doesn't disappear into the bg
+    while not being highlighted) */
+body.legacy #output > .compile-error:not(.highlights-active) a.highlight,
+body.legacy .check-block-error > .compile-error:not(.highlights-active) a.highlight,
+body.legacy .check-block-test.failing-test:not(.highlights-active) a.highlight {
+  color: var(--inactive-highlight-text) !important;
+}
+
+body.legacy #output .highlight {
+  cursor: pointer;
+}
+
+body.legacy .hinted-highlight {
+  cursor: pointer;
+  border-bottom: 2px var(--active-highlight-underline) solid;
+}
+
+body.legacy .highlight {
+  border-bottom: 2px var(--active-highlight-underline) solid;
+}
+
+body.legacy .hinted-highlight.highlight-on,
+body.legacy .highlight.highlight-on {
+  border-bottom: 2px var(--inactive-highlight-underline) solid;
+}
+
+body.legacy .highlight-blink {
+  animation: pulse 0.4s infinite alternate
+}
+
+@keyframes pulse {
+  from {
+  }
+  to {
+  background-color:transparent;
+  }
+}
+
+@keyframes pulse-underline {
+  from {
+  }
+  to {
+  background-color:transparent;
+  border-color:transparent;
+  }
+}
+
+body.legacy .test-reason > code,
+body.legacy .test-reason > .replOutput,
+body.legacy .test-reason > .replTextOutput,
+body.legacy .compile-error > code,
+body.legacy .compile-error > .replOutput,
+body.legacy .compile-error > .replTextOutput,
+body.legacy .parse-error > code,
+body.legacy .parse-error > .replOutput,
+body.legacy .parse-error > .replTextOutput {
+  margin-left:2em;
+}
+
+body.legacy code div {
+  display:inline;
+}
+
+body.legacy .highlight.emphasize:not(:hover)::before {
+  content : '';
+  position: absolute;
+  margin-left: 1em;
+  height: 1em;
+  width: 1em;
+  box-shadow:0 0 200px 1em var(--default-border);
+  opacity: 0;
+  border-radius: 100%;
+  animation: emphasize 0.5s 1;
+}
+
+@keyframes emphasize {
+  from {
+  display: block;
+  transform: scale(0);
+  opacity: 1.0;
+  }
+  to {
+  display: block;
+  transform: scale(10);
+  opacity: 0;
+  }
+}
+
+body.legacy .emphasize-line {
+  background-color:var(--emph-line-bg);
+  opacity: 1;
+  animation: emphasize-line 0.5s;
+}
+
+@keyframes emphasize-line {
+  from {
+  opacity: 1;
+  }
+  to {
+  opacity: 0;
+  }
+}
+
+body.legacy .underline:not(:hover) {
+  background-color: initial;
+}
+
+
+body.legacy .check-highlight {
+ background-color: var(--check-highlight-bg);
+ border-bottom: 2px solid var(--check-highlight-border);
+}
+
+body.legacy .compile-error {
+  font-family: sans-serif;
+  border: 1px dashed var(--err-dotted-border);
+  padding: 0.2em;
+  box-shadow: 0px 4px 5px var(--shadow-color);
+  border-radius: 3px;
+  background: var(--err-bg);
+  margin: 6px;
+}
+
+body.legacy .compile-error .code {
+  font-family: var(--font-stack);
+}
+
+body.legacy .compile-error .srcloc {
+  font-family: var(--font-stack);
+}
+
+body.legacy .compile-error a {
+  color: var(--err-link);
+  cursor: pointer;
+}
+
+body.legacy .parse-error {
+  font-family: sans-serif;
+  border: 1px dashed var(--err-dotted-border);
+  /* font-size: 10pt; */
+  padding: 3px;
+  box-shadow: 0px 4px 5px var(--shadow-color);
+  border-radius: 3px;
+  background: var(--err-bg);
+  margin: 6px;
+}
+
+body.legacy .error-icon {
+  size: 16pt;
+  color: var(--error);
+}
+
+body.legacy .parse-error .code {
+  font-family: var(--font-stack);
+}
+
+body.legacy .parse-error .srcloc {
+  font-family: var(--font-stack);
+}
+
+body.legacy .parse-error a {
+  color: var(--err-link);
+  cursor: pointer;
+}
+
+body.legacy .parse-error ul, 
+body.legacy .compile-error ul {
+  list-style-type: disc;
+  padding-left: 1em;
+}
+
+body.legacy .parse-error .hint, 
+body.legacy .compile-error .hint {
+   font-style: italic;
+}
+
+body.legacy .warning-upper,
+body.legacy .warning-lower {
+  position: absolute;
+  height: 2em;
+  width: 100%;
+  left:0;
+  z-index: 3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s linear;
+}
+
+body.legacy .warning-upper.hinting,
+body.legacy .warning-lower.hinting {
+  transition: opacity 0.1s linear;
+  pointer-events: all;
+  opacity: 1;
+}
+
+body.legacy .warning-upper {
+  animation-name: arrow-upper-bounce;
+  background-image:
+      url('/img/up-arrow.png'),
+      linear-gradient(to bottom,  var(--warning-gradient-1) 0%,var(--warning-gradient-2) 50%);
+}
+
+body.legacy .warning-lower {
+  animation-name: arrow-lower-bounce;
+  background-image:
+      url('/img/down-arrow.png'),
+      linear-gradient(to top,  var(--warning-gradient-1) 0%,var(--warning-gradient-2) 50%);
+}
+
+@keyframes arrow-upper-bounce {
+  from {background-position-y: -10px, center;}
+  to   {background-position-y: 0;}}
+@keyframes arrow-lower-bounce {
+  from {background-position-y: 10px, center;}
+  to   {background-position-y: 0;}}
+
+  body.legacy .warning-lower {
+  bottom:0;
+}
+
+body.legacy #main .warning-upper {
+  top:0;
+}
+
+body.legacy .repl > .warning-upper {
+  left:0;
+  margin-top: 40px;
+}
+
+body.legacy .topbar {
+  position: fixed;
+  width: 100%;
+  background-color: var(--topbar-bg);
+}
+
+/* NOTE(joe): removes the white bar in popups */
+body.legacy .ui-widget-content{
+  background: none;
+}
+
+/* From internet: http://stackoverflow.com/questions/5663137/jquery-modal-dialog-is-hidden-by-overlay-div-if-dialogs-parent-has-fixed-positi */
+body.legacy .ui-widget-overlay{
+  position:fixed;
+  z-index: 11000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background: var(--ui-widget-dim);
+}
+/* end from internet */
+
+body.legacy .ui-dialog {
+  border: 2px solid var(--default-border);
+  background-color: var(--ui-dialog-default);
+  border-radius: 5px;
+  z-index: 15000;
+}
+
+body.legacy .ui-dialog-titlebar {
+  background-color: var(--ui-dialog-title-bg);
+}
+
+body.legacy .ui-dialog-title {
+  color: var(--ui-dialog-default);
+  font-family: sans-serif;
+  position: relative;
+  left: 30px;
+}
+
+body.legacy .ui-dialog-titlebar-close {
+  position: relative;
+  left: 5px;
+  top: 5px;
+}
+
+body.legacy .ui-dialog-titlebar-close .ui-button-text {
+  display: none;
+}
+
+body.legacy .ui-dialog-titlebar-close .ui-button-icon-primary:before {
+  content: "×"
+}
+
+/* Resizable REPL */
+body.legacy #handle{
+  background:-webkit-linear-gradient(left, 
+    var(--repl-handle-gradient-darker) 0%,
+    var(--repl-handle-gradient-lighter) 40%,
+    var(--repl-handle-gradient-lighter) 60%,
+    var(--repl-handle-gradient-darker) 100%);
+  background:-o-linear-gradient(left, 
+    var(--repl-handle-gradient-darker) 0%,
+    var(--repl-handle-gradient-lighter) 40%,
+    var(--repl-handle-gradient-lighter) 60%,
+    var(--repl-handle-gradient-darker) 100%);
+  background:-moz-linear-gradient(left, 
+    var(--repl-handle-gradient-darker) 0%,
+    var(--repl-handle-gradient-lighter) 40%,
+    var(--repl-handle-gradient-lighter) 60%,
+    var(--repl-handle-gradient-darker) 100%);
+  background:linear-gradient(to right, 
+    var(--repl-handle-gradient-darker) 0%,
+    var(--repl-handle-gradient-lighter) 40%,
+    var(--repl-handle-gradient-lighter) 60%,
+    var(--repl-handle-gradient-darker) 100%);
+  cursor: ew-resize;
+  width:5px;
+  border: 1px solid var(--repl-handle-border);
+  border-top: none;
+  border-bottom: none;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin-top: 40px;
+  /* margin-bottom: 2.5rem; */
+  height:auto;
+}
+
+body.legacy.hideFooter #handle {
+  margin-bottom: 0rem;
+}
+
+body.legacy.hideHeader #handle {
+  margin-top: 0px;
+}
+
+body.legacy.smallHeader #handle {
+  margin-top: 25px;
+}
+
+body.legacy #runButton, 
+body.legacy #breakButton {
+  width: 150px;
+  box-shadow: 0px -5px 5px 1px var(--shadow-color);
+}
+
+body.legacy.smallHeader #runButton, 
+body.legacy.smallHeader #breakButton {
+  width: 60px;
+}
+
+body.legacy.smallHeader #runButton > span {
+  display: none;
+}
+
+body.legacy #runButton, 
+body.legacy #runDropdown {
+  background: var(--run-bg);
+  color: #eee;
+}
+
+body.legacy #runButton:hover{
+  background:var(--run-hover);
+}
+
+body.legacy #breakButton {
+  background:var(--stop-bg);
+}
+
+body.legacy #breakButton:hover{
+  background:var(--stop-hover);
+}
+
+body.legacy #runButton:hover,
+body.legacy #breakButton:hover{
+  box-shadow: 0px -5px 10px 5px var(--shadow-color);
+}
+
+body.legacy #runButton:disabled, 
+body.legacy #breakButton:disabled{
+  width: 150px;
+  background: none;
+  box-shadow: none;
+}
+
+body.legacy.smallHeader #runButton:disabled, 
+body.legacy.smallHeader #breakButton:disabled{
+  width: 60px;
+}
+
+body.legacy #runButton:disabled, 
+body.legacy #runDropdown:disabled {
+  color: #111;
+}
+
+body.legacy #runButton:hover[disabled],
+body.legacy #breakButton:hover[disabled]{
+  background: none;
+  box-shadow: none;
+}
+
+body.legacy #breakButton:disabled {
+  background: #C8C8C8;
+}
+
+body.legacy #breakButton:hover[disabled] {
+  background: #C8C8C8;
+}
+
+body.legacy #runPart {
+  background: var(--run-bg);
+  padding: 0;
+  /* margin != 0 because we'll be pushing this flex item right */
+}
+
+body.legacy #runli {
+  z-index: 2;
+}
+
+body.legacy #rundropdownli {
+  z-index: 1; /* to push its left lap under the Run button */
+}
+
+body.legacy #rundropdownli {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 20px;
+  background: #317bcf;
+}
+
+body.legacy #rundropdownli > div {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.legacy .dropdown {
+  background: var(--run-bg);
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 5px;
+  border: 0;
+  box-shadow: 0px -2px 5px 2px var(--shadow-lighter);
+}
+
+body.legacy #select-run a {
+  color: #eeeeee;
+  text-decoration: none;
+}
+
+body.legacy #select-tc-run a {
+  color: #eeeeee;
+  text-decoration: none;
+}
+
+
+body.legacy #run-dropdown-content {
+  position: absolute;
+  right: 153px;
+  top: 40px;
+  margin: 0;
+  width: 172px;
+  display: none;
+}
+
+body.legacy.smallHeader #run-dropdown-content {
+  top: 25px;
+  right: 63px;
+}
+
+body.legacy #run-dropdown-content li {
+  color: var(--light-text);
+  font-family: sans-serif;
+  font-size: 15px;
+  height: 23px;
+  width: 100%;
+  background: var(--run-bg);
+  padding: 5px;
+  box-shadow: 0px -2px 5px 2px var(--shadow-lighter);
+  text-align: center;
+}
+
+body.legacy #run-dropdown-content > li > div {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+body.legacy #run-dropdown-content > li > div > a {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+body.legacy #run-dropdown-content li:hover {
+  background:var(--run-hover);
+  box-shadow: 0px -5px 10px 5px var(--shadow-color);
+  cursor:pointer;
+}
+
+body.legacy .dropdown:hover {
+  box-shadow: 0px -5px 10px 5px var(--shadow-color);
+  background:var(--run-hover);
+}
+
+body.legacy .module-info-hover {
+  width: 30em;
+  height: auto;
+  border: 1px solid var(--default-border);
+  padding: 5px;
+  background-color: var(--light-text);
+}
+
+body.legacy .CodeMirror-linewidget {
+  width: 100%!important;
+  overflow: visible;
+  position: relative;
+  z-index: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body.legacy .editor-check-block-message:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+body.legacy .editor-check-block-message {
+  text-align: center;
+  overflow: none;
+}
+
+body.legacy .editor-check-block-success {
+  background: var(--success-bg);
+  box-shadow: 0 1em 11px 2px var(--success-bg);
+}
+
+body.legacy .editor-check-block-failed {
+  background: var(--fail-bg);
+  box-shadow: 0 0.5em 11px 3px var(--fail-bg);
+}
+
+body.legacy .editor-check-block-error {
+  background: var(--check-error-bg);
+  box-shadow: 0 1em 11px 2px var(--check-error-bg);
+}
+
+body.legacy .check-block-error {
+  position: relative;
+}
+
+@keyframes emphasize-error {
+  from {background-color: white; }
+  to {}
+}
+
+body.legacy .check-block-test.failing-test:not(.highlights-active) {
+  background-color: var(--failing-test-bg); 
+  overflow: hidden;
+}
+
+body.legacy .check-block-test.passing-test {
+  background-color: var(--passing-test-bg);
+}
+
+body.legacy .check-block-test.passing-test .cm-snippet {
+  margin: 0.5em;
+}
+
+body.legacy #output > .compile-error.highlights-active,
+body.legacy .check-block-error .highlights-active.compile-error,
+body.legacy .check-block-test.highlights-active {
+  border: 0.3em var(--highlights-active-border) solid;
+  box-shadow: 0 0 1em var(--err-focused-shadow);
+}
+
+
+body.legacy .check-block-error .highlights-active.compile-error,
+body.legacy .check-block-test.highlights-active {
+  background: var(--highlights-active-bg);
+}
+
+body.legacy .check-block:not(.expanded) > .check-block-tests {
+  display: none;
+}
+
+body.legacy .test-reason:empty,
+body.legacy .check-block-error:empty {
+  margin: 0 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height: 3em;
+  color: var(--empty-check-text);
+  overflow: hidden;
+}
+
+body.legacy .check-block-error:empty {
+  background-color: var(--empty-check-err-bg);
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+body.legacy .test-reason:empty:before,
+body.legacy .check-block-error:empty:before {
+  content: '';
+  display: block;
+  min-height: 3em;
+  min-width: 3em;
+  background-image: url(/img/pyret-spin.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 1;
+}
+
+body.legacy .test-reason:empty:after,
+body.legacy .check-block-error:empty:after {
+  display: block;
+  content: 'Processing Result…';
+  flex: 1.5;
+}
+
+
+body.legacy .check-block-header:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.5em;
+  text-decoration: underline;
+}
+
+body.legacy .check-block.expanded > .check-block-header::after {
+  content: 'Hide Details';
+}
+
+body.legacy .check-block:not(.expanded) > .check-block-header::after {
+  content: 'Show Details';
+}
+
+
+body.legacy .check-block-test > header {
+  width: 100%;
+  padding: 0.5em;
+  line-height: 0.9;
+}
+
+body.legacy .check-block-test.failing-test.highlights-active > header {
+  background-color: var(--failing-test-header-bg);
+}
+
+body.legacy .check-block-test .CodeMirror {
+  background:var(--check-block-snippet-bg);
+}
+
+body.legacy .errored-test-marker {
+  background-color: var(--err-gutter);
+}
+
+body.legacy .failed-test-marker {
+  background-color: var(--failed-test-gutter-marker);
+}
+
+body.legacy .failed-test-marker > .CodeMirror-linenumber {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+body.legacy .summary-bits {
+  color: var(--default-text);
+  display: flex;
+}
+
+body.legacy .summary-bit {
+  flex: 1;
+  text-align: center;
+  padding: 0.5em;
+}
+
+body.legacy .summary-count {
+  display: block;
+  font-size: 20px;
+}
+
+body.legacy .summary-bit.summary-passed {
+  background: var(--summary-pass-bg);
+}
+
+body.legacy .summary-bit.summary-failed {
+  background: var(--summary-fail-bg);
+}
+
+body.legacy .summary-errored > .summary-count {
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+body.legacy .summary-errored {
+  background: var(--summary-error-bg);
+  color: var(--summary-err);
+  padding: .5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+body.legacy .summary-text {
+  border-left: 1px var(--summary-err-left-border) solid;
+  padding-left: .5em;
+}
+
+body.legacy .highlight-irrelevant {
+  opacity: 0.2;
+}
+
+body.legacy .cm-snippet {
+  border: 1px var(--snippet-border) dashed;
+  overflow: hidden;
+  cursor: default;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+body.legacy .cm-snippet header {
+  font-size: .7em;
+  background: var(--snippet-header-bg);
+  padding: 0 .5em;
+  box-shadow: 0 0 3px hsla(0, 0%, 0%,.5);
+  z-index: 100;
+  position: relative;
+  border-bottom: 1px var(--snippet-header-border) solid;
+  text-align: right;
+}
+
+body.legacy .stacktrace > div {
+  cursor:pointer;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  overflow:visible;
+}
+
+body.legacy .stacktrace .cm-snippet {
+  cursor: pointer;
+  overflow-y: hidden;
+}
+
+body.legacy .stacktrace .cm-snippet > .CodeMirror {
+  pointer-events: none;
+  max-height: 1.5em;
+}
+
+body.legacy #main.spotlight .CodeMirror-matchingbracket::before {
+  opacity:0;
+  transition: .1s opacity linear .3s;
+}
+
+body.legacy #main.spotlight div.CodeMirror span:not(.spotlight) {
+  background-color: initial!important;
+}
+
+body.legacy #main.spotlight div.CodeMirror span.spotlight {
+  background-color: var(--spotlighted-text-bg) !important;
+}
+
+body.legacy #main.spotlight .CodeMirror-matchingbracket,
+body.legacy #main.spotlight .CodeMirror-matchingbracket.open,
+body.legacy #main.spotlight .CodeMirror-matchingbracket.close,
+body.legacy #main.spotlight .CodeMirror-matchingbracket-region,
+body.legacy #main.spotlight .repl-echo > div.CodeMirror,
+body.legacy #main.spotlight .repl,
+body.legacy #main.spotlight .repl-prompt > div.CodeMirror,
+body.legacy #main.spotlight > div.replMain > div.CodeMirror {
+  border-color: transparent;
+  box-shadow:none;
+  background-color: var(--non-spotlight-bg);
+  transition: .1s background-color linear .3s;
+}
+body.legacy #main.spotlight .compile-error:not(:hover),
+body.legacy #main.spotlight .check-block-test:not(:hover),
+body.legacy #main.spotlight .check-block:not(:hover) {
+  opacity:0.25;
+  transition: .1s opacity linear .3s;
+}
+body.legacy #main.spotlight .check-block {
+  transition: .1s background-color linear .3s;
+  background-color: var(--surrounding-check-spotlight-bg);
+}
+
+body.legacy .stacktrace > div .CodeMirror-vscrollbar {
+  display:none!important;
+}
+
+body.legacy .stacktrace > div:hover {
+  box-shadow:0 0 1em var(--shadow-darker);
+}
+
+body.legacy .stacktrace > div:not(:first-of-type):before {
+  content: '⤤';
+  margin-top: -1em;
+  margin-left: -1em;
+  position: absolute;
+}
+
+body.legacy table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+    display: table!important;
+    border:1px var(--table-border) solid;
+    border-radius:1em;
+    overflow:hidden;
+    background:var(--table-bg);
+}
+
+body.legacy table.choiceContainer {
+   border: 0px;
+   margin: 1em;
+}
+body.legacy div.choiceContainer {
+   text-align: center;
+}
+body.legacy div.choiceContainer input[type=text] {
+  padding: 0.5em;
+  font-size: 100%;
+}
+body.legacy div.choiceContainer .textLabel {
+  margin-right: 1em;
+}
+body.legacy div.choiceContainer > button {
+  margin: 1em;
+  cursor: pointer;
+  background-color: var(--run-bg);
+  border: none;
+  border-radius: 0px;
+  color: var(--choice-button);
+  text-align: center;
+  transition: box-shadow 0.2s;
+  font-size: 15px;
+  height: 100%;
+  padding: 0px 15px;
+  vertical-align: middle;
+  margin:0px 1px;
+}
+
+body.legacy th {
+    background: var(--th-bg);
+}
+
+body.legacy th, 
+body.legacy td {
+    text-align: left;
+    padding: 1em;
+    width: auto;
+    border-right:1px var(--table-col-dividers) solid;
+}
+
+body.legacy th:last-child, 
+body.legacy td:last-child {
+    padding-right: 2em;
+    border-right: unset;
+}
+
+body.legacy tr:nth-child(even){background-color: var(--table-even-rows-bg)}
+
+body.legacy table.pyret-table thead {
+  box-shadow: 0px 2px 2px var(--shadow-color);
+}
+body.legacy table.pyret-row th {
+  box-shadow: 2px 0px 2px var(--shadow-color), -2px 0px 2px var(--shadow-color);
+  border: none;
+}
+body.legacy table.pyret-row td {
+  border: none;
+}
+/* NOTE(joe): this helps distinguish a row that appears in a table cell */
+body.legacy table.pyret-row {
+  box-shadow: 2px 2px 2px var(--shadow-color);
+}
+
+/* MODAL */
+/* The Modal (background) */
+body.legacy .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--default-border); /* Fallback color */
+  background-color: var(--shadow-darker); /* Black w/ opacity */
+  font-family: sans-serif;
+}
+
+/* Modal Content */
+body.legacy .modal-content {
+  position: relative;
+  background-color: var(--modal-content-bg);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--modal-content-border);
+  width: 60%;
+  box-shadow: 0 4px 8px 0 var(--shadow-color),0 6px 20px 0 var(--shadow-color);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Submit and Close Buttons */
+/*.modal .submit,
+.modal .close {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px 5px;
+}*/
+
+body.legacy .modal .submit {
+  float: right;
+  padding: 0px 5px;
+}
+
+body.legacy .modal table {
+  width: 90%;
+  margin: 0 5%;
+}
+
+body.legacy .modal td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  height: auto;
+}
+
+body.legacy .pyret-modal-option-radio,
+body.legacy .pyret-modal-option-message {
+  vertical-align: middle;
+}
+/*
+.submit:hover,
+.submit:focus,
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}*/
+
+body.legacy .modal .submit,
+body.legacy .modal .close  {
+  height: 40px;
+  width: 150px;
+  box-shadow: 0px -2px 5px 1px var(--shadow-color);
+  margin-top: 10px;
+}
+
+body.legacy .modal .submit{
+  background: var(--run-bg);
+}
+
+body.legacy .modal .submit:hover{
+  background:var(--run-hover);
+}
+
+body.legacy .modal .close{
+  background:var(--stop-bg);
+}
+
+body.legacy .modal .close:hover{
+  background:var(--stop-hover);
+}
+
+body.legacy .modal .submit:hover,
+body.legacy .modal .close:hover{
+  box-shadow: 0px -5px 10px 5px var(--shadow-color);
+}
+
+body.legacy .modal-header {
+  padding: 2px 16px;
+  background-color: var(--shadow-color);
+  color: var(--modal-header-text);
+  text-align: center;
+}
+
+body.legacy .modal-body {
+  padding: 2px 16px;
+  font-size: 18px;
+}
+
+body.legacy .modal td {
+  margin: 10px 16px;
+}
+
+body.legacy .modal-footer {
+  padding: 2px 16px;
+  background-color: var(--shadow-color);
+  color: var(--light-text);
+  height: 60px;
+}
+
+body.legacy .stale.test-results .check-block-failed,
+body.legacy .stale.test-results .check-block-success,
+body.legacy .stale.test-results .check-block-errored,
+body.legacy .stale.test-results .check-block-test,
+body.legacy .stale.test-results .summary-bits {
+  transition: background-color 0.3s linear;
+}
+
+body.legacy .stale.test-results .stale-warning {
+  position: block;
+  /* Note: this is FF-only, but if the consensus is that it's a nice
+   * effect, there is a polyfill for Chrome that adds support */
+  position: sticky;
+  color: var(--light-text);
+  top: 0;
+  z-index: 500;
+  background-color: var(--stale-warning-bg);
+}
+
+body.legacy .stale.test-results .check-block-failed {
+  background-color: var(--stale-fail-bg);
+}
+
+body.legacy .stale.test-results .check-block-success {
+  background-color: var(--stale-success-bg);
+}
+
+body.legacy .stale.test-results .check-block-errored {
+  background-color: var(--stale-err-bg);
+}
+
+body.legacy .stale.test-results .check-block-test.failing-test:not(.highlights-active) {
+  background-color: var(--stale-fail-no-highlight);
+}
+
+body.legacy .stale.test-results .check-block-test.highlights-active {
+  background-color: var(--stale-highlight);
+}
+
+body.legacy .stale.test-results .check-block-test.highlights-active > header {
+  background-color: var(--stale-highlight-header);
+}
+
+body.legacy .stale.test-results .check-block-test.passing-test {
+  background-color: var(--stale-passing-test);
+}
+
+body.legacy .stale.test-results .testing-summary .summary-passed {
+  background-color: var(--stale-success-bg);
+}
+
+body.legacy .stale.test-results .testing-summary .summary-failed {
+  background-color: var(--stale-fail-bg);
+}
+
+body.legacy .stale.test-results .testing-summary .summary-errored {
+  background-color: var(--stale-err-summary);
+}
+
+body.legacy .stale .compile-error.highlights-active,
+body.legacy .stale .compile-error.highlights-active,
+body.legacy .stale .check-block-test.highlights-active {
+  border-color: var(--stale-err-highlight);
+}
+
+
+body.legacy .paintBrush {
+   height: 2.1em;
+   margin-right: -0.5em;
+   position: relative;
+   z-index: 2;
+}
+body.legacy .paintSpan {
+   display: inline-block;
+   position: relative;
+}
+body.legacy .paintBlob {
+   width: 2.5em;
+   height: 1.5em;
+   position: relative;
+   z-index: 1;
+   vertical-align: baseline;
+   display: inline-block;
+   -webkit-mask-image: url(/img/paint.svg);
+   mask-image: url(/img/paint.svg);
+   -webkit-mask-size: contain;
+   mask-size: 100% 100%;
+   mask-type: luminance;
+}
+body.legacy .checkersBlob {
+   margin-right: -2.5em;
+   width: 2.5em;
+   height: 1.5em;
+   position: relative;
+   background-image: url(/img/checkers.svg);
+   background-size: 2.5em 1.5em;
+   display: inline-block;
+}
+body.legacy .error-bg {
+  background-color: var(--error-bg);
+}
+body.legacy .ok-bg {
+  background-color: white;
+}
+body.legacy label.controller {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
+body.legacy button.controller {
+  margin: auto;
+  display: block;
+}
+
+body.legacy .screenreader-only {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}

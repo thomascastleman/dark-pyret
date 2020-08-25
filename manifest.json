@@ -1,6 +1,6 @@
 {
   "name": "Dark Pyret",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "manifest_version": 2,
   "description": "Dark mode for the Pyret editor on code.pyret.org",
   "short_name": "dark-pyret",
@@ -10,12 +10,38 @@
    "128": "images/icons/dark-pyret-icon-128.png" },
   "homepage_url": "https://github.com/thomascastleman/dark-pyret",
   "content_scripts": [{
-    "js": ["js/toggle-theme.js"],
+    "js": ["js/theme.js"],
+    "css": [
+      "css/overrides/editor.css",
+      "css/overrides/non-default-overrides.css",
+      "css/overrides/themes/default.css",
+      "css/overrides/themes/base16.css",
+      "css/overrides/themes/material-darker.css",
+      "css/overrides/themes/monokai.css",
+      "css/overrides/themes/panda-syntax.css"
+    ],
     "matches": [
-      "https://code.pyret.org/*",
-      "https://pyret.cs.brown.edu/*",
-      "https://cpo.herokuapp.com/*",
-      "http://cpo.herokuapp.com/*"
+      "https://code.pyret.org/editor",
+      "https://pyret.cs.brown.edu/assignment/*",
+      "https://cpo.herokuapp.com/editor",
+      "http://cpo.herokuapp.com/editor"
+    ]
+  },
+  {
+    "js": ["js/theme.js"],
+    "css": [
+      "css/overrides/home-login.css",
+      "css/overrides/themes/default.css",
+      "css/overrides/themes/base16.css",
+      "css/overrides/themes/material-darker.css",
+      "css/overrides/themes/monokai.css",
+      "css/overrides/themes/panda-syntax.css"
+    ],
+    "matches": [
+      "https://code.pyret.org/",
+      "https://pyret.cs.brown.edu/",
+      "https://cpo.herokuapp.com/",
+      "http://cpo.herokuapp.com/"
     ]
   }],
   "background": {
@@ -23,12 +49,6 @@
     "persistent": false
   },
   "permissions" : ["tabs", "storage"],
-  "web_accessible_resources": [
-    "css/overrides/editor-override.css",
-    "css/overrides/login-override.css",
-    "css/overrides/home-override.css",
-    "css/overrides/themes/*"
-  ],
   "browser_action": {
     "default_popup": "html/popup.html",
     "default_title": "Dark Pyret"

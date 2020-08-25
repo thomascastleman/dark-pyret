@@ -1,0 +1,124 @@
+/*
+  Style overrides for the homepage of CPO/related sites
+*/
+
+/* background white -> dark */
+body.legacy:not(.default) div.wrap, 
+body.legacy:not(.default), 
+body.legacy:not(.default) .footer {
+  background-color: var(--background);
+}
+
+/* header div with "open editor" and "sign out" buttons */
+body.legacy:not(.default) #header {
+  border-bottom: 2px solid var(--selected-text);
+}
+
+/* "code.pyret.org" in left of header */
+body.legacy:not(.default) .logo-text {
+  color: var(--default-text);
+}
+
+/* email text in left of header */
+body.legacy:not(.default) .person-text {
+  color: var(--comments);
+}
+
+/* footer div with "privacy" and "software" links */
+body.legacy:not(.default) .footer {
+  border-top: 1px solid var(--selected-text);
+}
+
+/* links in the footer */
+body.legacy:not(.default) .footer a {
+  color: var(--blue-link-color);
+}
+
+/* "Sign out" "Open Editor" and other buttons */
+body.legacy:not(.default) .auth-button, 
+body.legacy:not(.default) .start-button, 
+body.legacy:not(.default) #start-button, 
+body.legacy:not(.default) .button {
+  background-color: var(--blue-link-color);
+  color: var(--background);
+}
+
+/* "View in Google Drive" button */
+body.legacy:not(.default) #select-file {
+  background-color: var(--red-link-color);
+}
+
+body.legacy:not(.default) #loading-spinner * {
+  color: var(--default-text);
+}
+
+/* all file names / modify dates */
+body.legacy:not(.default) #file-picker-modal .file-list * {
+  color: var(--default-text);
+}
+
+/* "New file name: " and ".arr" */
+body.legacy:not(.default) .modal-body form label, 
+body.legacy:not(.default) .modal-body form span {
+  color: var(--default-text);
+}
+
+/* input for entering new file name */
+body.legacy:not(.default) .modal-body form input.form { color: var(--background); }
+
+/* individual filewrapper backgrounds */
+body.legacy:not(.default) .file {
+  background-color: var(--lighter-bg);
+}
+
+body.legacy:not(.default) .file:hover {
+  background: var(--lighter-bg-2);
+}
+
+/* background */
+body.legacy:not(.default) #file-picker-modal-tabs, 
+body.legacy:not(.default) #file-picker-modal-body {
+  background-color: var(--background);
+}
+
+/* the NON-active tab of "Recent Files" or "New File" */
+body.legacy:not(.default) .tab {
+  color: var(--default-text);
+}
+
+/* the active tab of "Recent Files" or "New File" */
+body.legacy:not(.default) .tab.active {
+  background-color: var(--blue-link-color);
+  color: var(--background);
+}
+
+/* border around the modal in the center (and tabs) */
+body.legacy:not(.default) .modal-body, 
+body.legacy:not(.default) #file-picker-modal-tabs {
+  border: 2px solid var(--lighter-bg-2);
+}
+
+/* modal body scrollbar */
+body.legacy:not(.default) #file-picker-modal-body::-webkit-scrollbar {
+  width: 14px;
+  background-color: var(--scroll-bg);
+}
+
+body.legacy:not(.default) #file-picker-modal-body::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 2px;
+}
+
+body.legacy:not(.default) #file-picker-modal-body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scroll-thumb-highlight);
+}
+
+/* main text on the login page */
+body.legacy:not(.default) #root > div > div.main.middle.container p {
+  color: var(--default-text);
+}
+
+/* links on the login page */
+body.legacy:not(.default) #root > div > div.main.middle.container a {
+  color: var(--blue-link-color);
+}
